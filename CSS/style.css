@@ -1,0 +1,84 @@
+* {
+    font-family: monospace;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    background-color: #000 !important;
+}
+
+.slide {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-content {
+    padding: 20px;
+}
+
+/*Estilos para el header slide 1*/
+.navbar {
+    color: #000;
+    width: 100%;
+}
+
+.navbar-brand img {
+    max-width: 120px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.search {
+    width: 250px;
+    text-align: center;
+}
+
+.navbar-toggler {
+    color: #000;
+    margin-left: auto;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    margin-left: 10px;
+    background-color: #333 !important;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #f4fd1d !important;
+}
+
+.container-welcome {
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.welcome-message {
+    text-align: start;
+    font-size: 15px;
+}
