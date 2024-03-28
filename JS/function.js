@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   const slides = document.querySelectorAll('.slide');
   const firstSlide = slides[0];
-  const secondSlide = slides[1];
 
   function checkSlide() {
       slides.forEach(slide => {
@@ -19,9 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 
-  // Agregar la clase 'active' a los dos primeros slides al cargar la página
   firstSlide.classList.add('active');
-  secondSlide.classList.add('active');
 
   window.addEventListener('scroll', checkSlide);
   window.addEventListener('resize', checkSlide);
