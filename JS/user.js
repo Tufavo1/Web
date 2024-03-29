@@ -1,36 +1,30 @@
-const userBtn = document.getElementById('user-btn');
-const userModal = document.getElementById('userModal');
-const toggleRegisterLink = document.getElementById('toggleRegisterLink');
-const toggleLoginLink = document.getElementById('toggleLoginLink');
-const registerForm = document.getElementById('registerForm');
-const loginForm = document.getElementById('loginForm');
+document.addEventListener('DOMContentLoaded', function () {
+    const switchToRegister = document.getElementById('switch-to-register');
+    const switchToLogin = document.getElementById('switch-to-login');
+    const loginContainer = document.querySelector('.login-container');
+    const registerContainer = document.querySelector('.register-container');
 
-userBtn.addEventListener('click', () => {
-    userModal.style.display = 'block';
-});
+    switchToRegister.addEventListener('click', function (event) {
+        event.preventDefault();
+        loginContainer.style.opacity = 0;
+        setTimeout(function () {
+            loginContainer.style.display = 'none';
+            registerContainer.style.display = 'block';
+            setTimeout(function () {
+                registerContainer.style.opacity = 1;
+            }, 100);
+        }, 500);
+    });
 
-toggleRegisterLink.addEventListener('click', () => {
-    registerForm.style.display = 'block';
-    loginForm.style.display = 'none';
-});
-
-toggleLoginLink.addEventListener('click', () => {
-    loginForm.style.display = 'block';
-    registerForm.style.display = 'none';
-});
-
-registerForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const email = document.getElementById('registerEmail').value;
-    const password = document.getElementById('registerPassword').value;
-    console.log("Registrarse con:", email, password);
-});
-
-loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const email = document.getElementById('loginEmail').value;
-    const password = document.getElementById('loginPassword').value;
-    console.log("Iniciar sesión con:", email, password);
+    switchToLogin.addEventListener('click', function (event) {
+        event.preventDefault();
+        registerContainer.style.opacity = 0;
+        setTimeout(function () {
+            registerContainer.style.display = 'none';
+            loginContainer.style.display = 'block';
+            setTimeout(function () {
+                loginContainer.style.opacity = 1;
+            }, 100);
+        }, 500);
+    });
 });

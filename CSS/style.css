@@ -77,6 +77,47 @@ span {
     font-size: 15px;
 }
 
+/* Estilos para el nav-item */
+.nav-item {
+    list-style: none;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-link svg {
+    margin-right: 5px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #000 !important;
+    border: 1px solid #ebf909 !important;
+    z-index: 1;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+}
+
+.dropdown-menu li a {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #ebf909;
+    color: #000 !important;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 /*Estilos para el nav pero cuando se active el collapse*/
 .collapse.show {
     background-color: #000;
@@ -189,17 +230,17 @@ img {
 
 .card-link {
     text-decoration: none;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
     margin: 10px;
 }
 
 .card {
     position: relative;
-    width: 300px;
+    width: 400px;
     height: 200px;
     overflow: hidden;
     border-radius: 25px;
@@ -217,6 +258,10 @@ img {
 
 .card:hover {
     transform: translateY(-5px) scale(1.05);
+    -webkit-transform: translateY(-5px) scale(1.05);
+    -moz-transform: translateY(-5px) scale(1.05);
+    -ms-transform: translateY(-5px) scale(1.05);
+    -o-transform: translateY(-5px) scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
