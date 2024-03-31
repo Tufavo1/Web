@@ -77,6 +77,78 @@ span {
     font-size: 15px;
 }
 
+/*Estilos para el carrito*/
+.popover-container {
+    position: relative;
+    display: inline-block;
+}
+
+.popover-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    min-width: 300px;
+    z-index: 1000;
+}
+
+.popover-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.popover-content th,
+.popover-content td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.popover-content th:first-child,
+.popover-content td:first-child {
+    padding-left: 0;
+}
+
+.popover-content th:last-child,
+.popover-content td:last-child {
+    padding-right: 0;
+    text-align: right;
+}
+
+.popover-content .total {
+    text-align: right;
+    font-weight: bold;
+}
+
+.popover-content .clear-cart {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc3545;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.popover-content .clear-cart:hover {
+    background-color: #c82333;
+}
+
+.popover-content .clear-cart:focus {
+    outline: none;
+}
+
+.popover-content .clear-cart:active {
+    transform: translateY(1px);
+}
+
+
 /* Estilos para el nav-item */
 .nav-item {
     list-style: none;
@@ -136,6 +208,141 @@ span {
     align-items: center;
 }
 
+/*Estilos del modal*/
+.user-panel {
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    right: -500px;
+    width: 500px;
+    height: 100%;
+    background-color: #fff;
+    color: #000;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+}
+
+.user-panel.open {
+    right: 0;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+}
+
+.close:hover {
+    color: #f4fd1d !important;
+}
+
+.container-form {
+    width: 350px;
+    margin: 0 auto;
+    padding: 30px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.title-panel {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"] {
+    margin: 0 auto;
+    width: 250px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    text-align: center;
+    padding: 8px;
+}
+
+button[type="submit"] {
+    display: flex;
+    justify-content: center;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff7f50;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+}
+
+.forgot-password {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    color: #ff7f50 !important;
+}
+
+.forgot-password:hover {
+    color: #000 !important;
+}
+
+.parrafo-panel {
+    margin-top: 15px;
+    text-align: center;
+    color: #000 !important;
+}
+
+#register-form {
+    display: none;
+}
+
+#register-form.visible {
+    display: block;
+}
+
+#register-link,
+#login-link {
+    color: #ff6347;
+}
+
+#register-link:hover,
+#login-link:hover {
+    text-decoration: underline;
+    color: #ff9900;
+}
+
+.contain-panel {
+    text-align: center;
+}
+
+.beneficios {
+    color: #000 !important;
+}
+
+.copyright {
+    color: #000 !important;
+}
 
 /*Estilos para separar el nav del slide*/
 .slide {
@@ -240,7 +447,7 @@ img {
 
 .card {
     position: relative;
-    width: 400px;
+    width: 320px;
     height: 200px;
     overflow: hidden;
     border-radius: 25px;

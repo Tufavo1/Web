@@ -2,9 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("registro-form");
 
     form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Evita el envío automático del formulario
+        event.preventDefault();
 
-        // Validación de nombre
         const nombreInput = document.getElementById("nombre");
         const nombreError = document.getElementById("nombre-error");
         if (nombreInput.value.trim() === "") {
@@ -15,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
             nombreError.textContent = "";
         }
 
-        // Validación de email
         const emailInput = document.getElementById("email");
         const emailError = document.getElementById("email-error");
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -27,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
             emailError.textContent = "";
         }
 
-        // Validación de contraseña
         const passwordInput = document.getElementById("password");
         const passwordError = document.getElementById("password-error");
         if (passwordInput.value.length < 6) {
@@ -38,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
             passwordError.textContent = "";
         }
 
-        // Si todos los campos son válidos, el formulario se envía
         form.submit();
     });
 });

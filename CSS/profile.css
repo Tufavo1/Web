@@ -1,50 +1,217 @@
 * {
     font-family: monospace;
+    font-weight: bold;
 }
 
-body {
+body,
+html {
     margin: 0;
     padding: 0;
-
+    height: auto;
+    background-color: #000 !important;
 }
 
-/*Estilos para el navbar*/
-header {
-    background-color: #000;
+.slide {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
+.slide.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-content {
+    padding: 20px;
+}
+
+/*Estilos para el header slide 1*/
 .navbar {
-    border-bottom: 5px solid #ebf909;
+    color: #000;
+    width: 100%;
+    background-color: #000;
 }
 
 .navbar-brand img {
-    width: 80px;
-    height: 80px;
+    max-width: 120px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
 }
 
-.btn-ingresa-ubicacion:hover,
-.btn-ingresa-ubicacion:focus {
-    background-color: #fff;
+.search {
+    width: 200px;
+    text-align: center;
+}
+
+.navbar-toggler {
     color: #000;
+    margin-left: auto;
 }
 
-.form-control {
-    border-radius: 20px;
-}
-
-.btns {
+.form-container {
     display: flex;
-    gap: 10px;
+    justify-content: center;
 }
 
-.btns .btn {
-    background-color: #000;
+.btn {
+    margin-left: 10px;
+    color: #fff !important;
+}
+
+.btn:hover {
+    background-color: #f4fd1d !important;
+    color: #000 !important;
+}
+
+svg {
+    margin-right: 2px;
+}
+
+span {
+    font-size: 15px;
+}
+
+/*Estilos para el carrito*/
+.popover-container {
+    position: relative;
+    display: inline-block;
+}
+
+.popover-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    min-width: 300px;
+    z-index: 1000;
+}
+
+.popover-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.popover-content th,
+.popover-content td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.popover-content th:first-child,
+.popover-content td:first-child {
+    padding-left: 0;
+}
+
+.popover-content th:last-child,
+.popover-content td:last-child {
+    padding-right: 0;
+    text-align: right;
+}
+
+.popover-content .total {
+    text-align: right;
+    font-weight: bold;
+}
+
+.popover-content .clear-cart {
+    display: block;
+    width: 100%;
+    padding: 10px;
     border: none;
+    border-radius: 5px;
+    background-color: #dc3545;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.btns .btn:hover,
-.btns .btn:focus {
+.popover-content .clear-cart:hover {
+    background-color: #c82333;
+}
+
+.popover-content .clear-cart:focus {
+    outline: none;
+}
+
+.popover-content .clear-cart:active {
+    transform: translateY(1px);
+}
+
+
+/* Estilos para el nav-item */
+.nav-item {
+    list-style: none;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-link svg {
+    margin-right: 5px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #000 !important;
+    border: 1px solid #ebf909 !important;
+    z-index: 1;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+}
+
+.dropdown-menu li a {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
     background-color: #ebf909;
+    color: #000 !important;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/*Estilos para el nav pero cuando se active el collapse*/
+.collapse.show {
+    background-color: #000;
+    border-bottom: 3px solid #f4fd1d;
+}
+
+.collapse.show .container-sb {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.collapse.show .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Estilos para separar el nav del slide*/
+.slide {
+    margin-top: 180px;
+    margin-bottom: -180px;
 }
 
 /*Estilos del main content*/
@@ -53,6 +220,7 @@ header {
     width: 100%;
     height: auto;
     margin-bottom: 30px;
+    margin-top: 100px;
 }
 
 .card {
@@ -126,91 +294,63 @@ img {
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
 }
-/*Estilos del footer*/
+/*Estilos para el footer*/
 .footer {
     background-color: #000;
-    border-top: 6px solid #ebf909;
-    width: 100%;
-    height: auto;
+    color: #fff;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact {
+    margin-top: 30px;
+}
+
+.contact h5 {
+    font-size: 25px;
+    margin-left: 60px;
+}
+
+.contact p {
+    margin-top: 10px;
 }
 
 .formulario-vip {
-    margin-top: -110px;
+    margin-top: 30px;
 }
 
 .form {
     text-align: center;
 }
 
-.form h5 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.container-form {
+.input-group {
     max-width: 400px;
     margin: 0 auto;
 }
 
 .form-control {
-    border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
-    font-size: 15px;
+    border: 4px solid #ebf909;
+    text-align: center;
+}
+
+.btn-outline-light {
+    background-color: #ebf909;
+    color: #000;
+    border: 4px solid #ebf909;
+}
+
+.btn-outline-light:hover {
+    background-color: #fff;
+    color: #ebf909;
+    border: 4px solid #fff;
 }
 
 .copyright {
-    font-size: 15px;
     text-align: center;
-}
-
-/*Login */
-.login{
-    width: 50%;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 16px;
-}
-
-input[type="submit"]:hover {
-    background-color: #45a049;
+    margin-top: 30px;
 }
