@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const slides = document.querySelectorAll("[data-slide]");
     const buttons = document.querySelectorAll("[data-button]");
     const cards = document.querySelectorAll(".card");
+    const botones = document.querySelectorAll(".btn-select");
+    const sections = document.querySelectorAll(".row");
 
     let currSlide = 0;
     let maxSlide = slides.length - 1;
@@ -35,19 +37,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let count = 0;
 
-        decrementBtn.addEventListener('click', function() {
+        decrementBtn.addEventListener('click', function () {
             if (count > 0) {
                 count--;
                 counterValue.textContent = count;
             }
         });
 
-        incrementBtn.addEventListener('click', function() {
+        incrementBtn.addEventListener('click', function () {
             count++;
             counterValue.textContent = count;
         });
     });
 
+    botones.forEach(button => {
+        button.addEventListener("click", () => {
+            const id = button.id;
+            sections.forEach(section => {
+                if (section.id === id) {
+                    section.style.display = "block";
+                } else {
+                    section.style.display = "none";
+                }
+            });
+        });
+    });
+
+    
     $("#filter-button").click(function () {
         $("#filter-panel").css("left", "0");
     });
