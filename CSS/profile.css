@@ -28,6 +28,143 @@ html {
     padding: 20px;
 }
 
+/*Estilos del panel*/
+.user-panel {
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    right: -600px;
+    width: 600px;
+    height: 100%;
+    background-color: #fff;
+    color: #000;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 9999;
+}
+
+.user-panel.open {
+    right: 0;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+}
+
+.close:hover {
+    color: #f4fd1d !important;
+}
+
+.container-form {
+    width: 350px;
+    margin: 0 auto;
+    padding: 30px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.title-panel {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"] {
+    margin: 0 auto;
+    width: 250px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    text-align: center;
+    padding: 8px;
+}
+
+button[type="submit"] {
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+button[type="submit"]:hover {
+    background-color: #f4fd1d;
+    color: #000;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+}
+
+.forgot-password {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    color: #ff7f50 !important;
+}
+
+.forgot-password:hover {
+    color: #000 !important;
+}
+
+.parrafo-panel {
+    margin-top: 15px;
+    text-align: center;
+    color: #000 !important;
+}
+
+#register-form {
+    display: none;
+}
+
+#register-form.visible {
+    display: block;
+}
+
+#register-link,
+#login-link {
+    color: #ff6347;
+}
+
+#register-link:hover,
+#login-link:hover {
+    text-decoration: underline;
+    color: #ff9900;
+}
+
+.contain-panel {
+    text-align: center;
+}
+
+.beneficios {
+    color: #000 !important;
+}
+
+.copyright {
+    color: #000 !important;
+}
+
 /*Estilos para el header slide 1*/
 .navbar {
     color: #000;
