@@ -89,7 +89,6 @@
                                         <th>Nombre Platillo</th>
                                         <th>Cantidad</th>
                                         <th>Precio</th>
-                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody id="carrito-body"></tbody>
@@ -320,7 +319,8 @@
                             <p class="card-price">1000</p>
                             <div class="counter">
                                 <button class="counter-btn decrement">-</button>
-                                <span class="counter-value">1</span>
+                                <input class="counter-value" type="number" id="contador" placeholder="1" value="1"
+                                    min="1" max="10" class="input-quantity" readonly></input>
                                 <button class="counter-btn increment">+</button>
                             </div>
                             <div class="button-container">
@@ -344,7 +344,8 @@
                             <p class="card-price">1000</p>
                             <div class="counter">
                                 <button class="counter-btn decrement">-</button>
-                                <span class="counter-value">0</span>
+                                <input class="counter-value" type="number" id="contador" placeholder="1" value="1"
+                                    min="1" max="10" class="input-quantity" readonly></input>
                                 <button class="counter-btn increment">+</button>
                             </div>
                             <div class="button-container">
@@ -368,7 +369,8 @@
                             <p class="card-price">Precio: $1000</p>
                             <div class="counter">
                                 <button class="counter-btn decrement">-</button>
-                                <span class="counter-value">0</span>
+                                <input class="counter-value" type="number" id="contador" placeholder="1" value="1"
+                                    min="1" max="10" class="input-quantity" readonly></input>
                                 <button class="counter-btn increment">+</button>
                             </div>
                             <div class="button-container">
@@ -392,7 +394,8 @@
                             <p class="card-price">Precio: $1000</p>
                             <div class="counter">
                                 <button class="counter-btn decrement">-</button>
-                                <span class="counter-value">0</span>
+                                <input class="counter-value" type="number" id="contador" placeholder="1" value="1"
+                                    min="1" max="10" class="input-quantity" readonly></input>
                                 <button class="counter-btn increment">+</button>
                             </div>
                             <div class="button-container">
@@ -456,7 +459,7 @@
     crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="../JS/user.js"></script>
+<script src="../JS/sitefunction.js"></script>
 <script src="../JS/script.js"></script>
 <script src="../JS/cart.js"></script>
 

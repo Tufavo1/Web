@@ -75,8 +75,8 @@ svg {
 }
 
 table {
-    width: 580px;
-    margin: 20px 10px;
+    width: 600px;
+    margin: 20px 5px;
     margin-top: 60px;
 }
 
@@ -114,6 +114,51 @@ table th {
     background-color: #f4fd1d;
     color: #fff;
     border-color: #fff;
+}
+
+/*Estilos del carrito de forma interna es decir que el tbody*/
+#carrito-body {
+    border-bottom: 2px solid #000;
+}
+
+#carrito-body tr {
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+}
+
+#carrito-body tr:hover {
+    background-color: #000;
+    transition: background-color 0.3s ease;
+    color: #fff;
+}
+
+#carrito-body td {
+    padding: 15px;
+    text-align: center;
+}
+
+#carrito-body .btn-eliminar-producto {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#carrito-body .btn-eliminar-producto:hover {
+    background-color: #f4fd1d;
+}
+
+#carrito-body img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos para el nav-item */
@@ -560,8 +605,26 @@ label[for="price-range"] {
 }
 
 .counter-value {
-    margin: 0 20px;
-    font-size: 24px;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #000;
+}
+
+.counter-value[readonly] {
+    background-color: #fff;
+    cursor: not-allowed;
+}
+
+.counter-value:disabled {
+    background-color: #fff;
+    cursor: not-allowed;
 }
 
 .button-container {

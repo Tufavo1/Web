@@ -62,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     });
-
     
     $("#filter-button").click(function () {
         $("#filter-panel").css("left", "0");
