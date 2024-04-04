@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const incrementBtn = card.querySelector(".increment");
         const counterValue = card.querySelector(".counter-value");
 
-        let count = 0;
+        let count = 1;
 
         decrementBtn.addEventListener('click', function () {
             if (count > 0) {

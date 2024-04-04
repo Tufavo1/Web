@@ -12,12 +12,22 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    document.getElementById("user-btn").addEventListener("click", function () {
-        document.getElementById("user-panel").classList.toggle("open");
+    document.getElementById("user-cart").addEventListener("click", function () {
+        document.getElementById("cart-content").style.display = "block";
+        document.getElementById("profile-content").style.display = "none";
+        document.getElementById("user-panel").classList.add("open");
     });
 
-    document.querySelector(".close").addEventListener("click", function () {
-        document.getElementById("user-panel").classList.remove("open");
+    document.getElementById("user-btn").addEventListener("click", function () {
+        document.getElementById("cart-content").style.display = "none";
+        document.getElementById("profile-content").style.display = "block";
+        document.getElementById("user-panel").classList.add("open");
+    });
+
+    document.querySelectorAll(".close").forEach(function (closeBtn) {
+        closeBtn.addEventListener("click", function () {
+            document.getElementById("user-panel").classList.remove("open");
+        });
     });
 
     document.getElementById("register-link").addEventListener("click", function () {
