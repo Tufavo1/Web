@@ -285,9 +285,9 @@
                 </div>
             </div>
             <div class="container-btn-select">
-                <button class="btn-select" id="almuerzos">Comida</button>
+                <button class="btn-select" id="almuerzos">Comidas</button>
                 <button class="btn-select" id="postres">Postres</button>
-                <button class="btn-select" id="bebidas">Bebidas</button>
+                <button class="btn-select" id="bebidas">Bebidas o Te o Cafe</button>
                 <button class="btn-select" id="licores">Licores</button>
             </div>
         </div>
@@ -296,7 +296,7 @@
 
     <section id="menu" class="py-5">
         <div class="container">
-            <h1 class="menu-title text-white">
+            <h1 class="menu-title text-black fw-bolder">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
                     class="bi bi-star-fill star" viewBox="0 0 16 16">
                     <path
@@ -307,7 +307,98 @@
                         d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                 </svg>
             </h1>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="almuerzos">
+            <div class="container-card row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="allmain">
+                <div class="col-6 col-md-4">
+                    <div class="card" data-id="1">
+                        <img src="../IMG/comida.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Platillo De Entrada</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident
+                                eaque cum quas, placeat accusantium quod dolorem qui culpa quasi nihil veritatis
+                                repudiandae fugit repellat facere. Repellat ducimus cumque ipsa velit.</p>
+                            <p class="card-price">Precio: $<span id="Precio">1000</span></p>
+                            <div class="counter">
+                                <button class="counter-btn decrement">-</button>
+                                <input class="counter-value" type="number" id="contador" placeholder="1" value="1"
+                                    min="1" max="10" class="input-quantity" readonly></input>
+                                <button class="counter-btn increment">+</button>
+                            </div>
+                            <div class="button-container">
+                                <button class="btn-card">Ver Ingredientes</button>
+                                <button class="btn-card añadir-platillo">Añadir Platillo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="card" data-id="1">
+                        <img src="../IMG/sushi.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Platillo De Entrada</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident
+                                eaque cum quas, placeat accusantium quod dolorem qui culpa quasi nihil veritatis
+                                repudiandae fugit repellat facere. Repellat ducimus cumque ipsa velit.</p>
+                            <p class="card-price">Precio: $<span id="Precio">1000</span></p>
+                            <div class="counter">
+                                <button class="counter-btn decrement">-</button>
+                                <input class="counter-value" type="number" id="contador" placeholder="1" value="1"
+                                    min="1" max="10" class="input-quantity" readonly></input>
+                                <button class="counter-btn increment">+</button>
+                            </div>
+                            <div class="button-container">
+                                <button class="btn-card">Ver Ingredientes</button>
+                                <button class="btn-card añadir-platillo">Añadir Platillo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="card" data-id="1">
+                        <img src="../IMG/jack-daniels.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Platillo De Entrada</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident
+                                eaque cum quas, placeat accusantium quod dolorem qui culpa quasi nihil veritatis
+                                repudiandae fugit repellat facere. Repellat ducimus cumque ipsa velit.</p>
+                            <p class="card-price">Precio: $<span id="Precio">1000</span></p>
+                            <div class="counter">
+                                <button class="counter-btn decrement">-</button>
+                                <input class="counter-value" type="number" id="contador" placeholder="1" value="1"
+                                    min="1" max="10" class="input-quantity" readonly></input>
+                                <button class="counter-btn increment">+</button>
+                            </div>
+                            <div class="button-container">
+                                <button class="btn-card">Ver Ingredientes</button>
+                                <button class="btn-card añadir-platillo">Añadir Platillo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4">
+                    <div class="card" data-id="1">
+                        <img src="../IMG/postres.jpg" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Platillo De Entrada</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident
+                                eaque cum quas, placeat accusantium quod dolorem qui culpa quasi nihil veritatis
+                                repudiandae fugit repellat facere. Repellat ducimus cumque ipsa velit.</p>
+                            <p class="card-price">Precio: $<span id="Precio">1000</span></p>
+                            <div class="counter">
+                                <button class="counter-btn decrement">-</button>
+                                <input class="counter-value" type="number" id="contador" placeholder="1" value="1"
+                                    min="1" max="10" class="input-quantity" readonly></input>
+                                <button class="counter-btn increment">+</button>
+                            </div>
+                            <div class="button-container">
+                                <button class="btn-card">Ver Ingredientes</button>
+                                <button class="btn-card añadir-platillo">Añadir Platillo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container-card row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="almuerzos">
                 <div class="col-6 col-md-4">
                     <div class="card" data-id="1">
                         <img src="../IMG/images.jpg" class="card-img-top" alt="entrada">
@@ -316,7 +407,7 @@
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident
                                 eaque cum quas, placeat accusantium quod dolorem qui culpa quasi nihil veritatis
                                 repudiandae fugit repellat facere. Repellat ducimus cumque ipsa velit.</p>
-                            <p class="card-price">1000</p>
+                            <p class="card-price">Precio: $<span id="Precio">1000</span></p>
                             <div class="counter">
                                 <button class="counter-btn decrement">-</button>
                                 <input class="counter-value" type="number" id="contador" placeholder="1" value="1"
@@ -330,19 +421,19 @@
                         </div>
                     </div>
                 </div>
-
             </div>
 
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="postres" style="display: none;">
+            <div class="container-card row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="postres"
+                style="display: none;">
                 <div class="col-6 col-md-4">
                     <div class="card" data-id="2">
-                        <img src="../IMG/postres.jpg" class="card-img-top" alt="entrada">
-                        <div class="card-body">
+                        <div class="card">
+                            <img src="../IMG/postres.jpg" class="card-img-top" alt="entrada">
                             <h5 class="card-title text-center">Platillo De Entrada</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta est
                                 ratione ipsa vitae fugiat enim cumque aperiam nobis delectus quam, dolor veniam ullam
                                 molestias dignissimos, architecto quisquam, reprehenderit illo veritatis.</p>
-                            <p class="card-price">1000</p>
+                            <p class="card-price">Precio: $<span id="Precio">1000</span></p>
                             <div class="counter">
                                 <button class="counter-btn decrement">-</button>
                                 <input class="counter-value" type="number" id="contador" placeholder="1" value="1"
@@ -358,16 +449,17 @@
                 </div>
             </div>
 
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="bebidas" style="display: none;">
+            <div class="container-card row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="bebidas"
+                style="display: none;">
                 <div class="col-6 col-md-4" data-id="3">
                     <div class="card">
-                        <img src="../IMG/jugos.jpg" class="card-img-top" alt="entrada">
-                        <div class="card-body">
+                        <div class="card">
+                            <img src="../IMG/jugos.jpg" class="card-img-top" alt="entrada">
                             <h5 class="card-title text-center">Platillo De Entrada</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta est
                                 ratione ipsa vitae fugiat enim cumque aperiam nobis delectus quam, dolor veniam ullam
                                 molestias dignissimos, architecto quisquam, reprehenderit illo veritatis.</p>
-                            <p class="card-price">Precio: $1000</p>
+                            <p class="card-price">Precio: $<span id="Precio">1000</span></p>
                             <div class="counter">
                                 <button class="counter-btn decrement">-</button>
                                 <input class="counter-value" type="number" id="contador" placeholder="1" value="1"
@@ -383,16 +475,17 @@
                 </div>
             </div>
 
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="licores" style="display: none;">
+            <div class="container-card row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="licores"
+                style="display: none;">
                 <div class="col-6 col-md-4">
                     <div class="card" data-id="4">
-                        <img src="../IMG/jack-daniels.jpg" class="card-img-top" alt="entrada">
-                        <div class="card-body">
+                        <div class="card">
+                            <img src="../IMG/jack-daniels.jpg" class="card-img-top" alt="entrada">
                             <h5 class="card-title text-center">Platillo De Entrada</h5>
                             <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta est
                                 ratione ipsa vitae fugiat enim cumque aperiam nobis delectus quam, dolor veniam ullam
                                 molestias dignissimos, architecto quisquam, reprehenderit illo veritatis.</p>
-                            <p class="card-price">Precio: $1000</p>
+                            <p class="card-price">Precio: $<span id="Precio">1000</span></p>
                             <div class="counter">
                                 <button class="counter-btn decrement">-</button>
                                 <input class="counter-value" type="number" id="contador" placeholder="1" value="1"
@@ -400,7 +493,6 @@
                                 <button class="counter-btn increment">+</button>
                             </div>
                             <div class="button-container">
-                                <button class="btn-card">Ver Ingredientes</button>
                                 <button class="btn-card añadir-platillo">Añadir Platillo</button>
                             </div>
                         </div>

@@ -1,40 +1,92 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById("registro-form");
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtener elementos del DOM
+    const userBtn = document.getElementById("user-btn");
+    const userPanel = document.getElementById("user-panel");
+    const profileBtn = document.getElementById("profile-btn");
 
-    form.addEventListener("submit", function(event) {
+    // Verificar si hay un usuario registrado al cargar la página
+    const loggedUser = JSON.parse(localStorage.getItem("LoggedUser"));
+    if (loggedUser) {
+        toggleButtons(true);
+    }
+
+    // Mostrar panel de usuario al hacer clic en el botón de identificación
+    userBtn.addEventListener("click", () => {
+        userPanel.style.display = "block";
+    });
+
+    // Manejar el envío del formulario de registro
+    document.getElementById("registration-form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        
+        // Obtener datos del formulario
+        const name = document.getElementById("register-name").value;
+        const lastname = document.getElementById("register-lastname").value;
+        const birthday = document.getElementById("register-birthday").value;
+        const phone = document.getElementById("register-phone").value;
+        const email = document.getElementById("register-email").value;
+        const password = document.getElementById("register-password").value;
+
+        // Guardar usuario en Local Storage
+        const registeredUser = {
+            name,
+            lastname,
+            birthday,
+            phone,
+            email,
+            password
+        };
+        localStorage.setItem("RegisteredUser", JSON.stringify(registeredUser));
+
+        // Redireccionar al perfil
+        redirectToProfile();
+    });
+
+    // Manejar el envío del formulario de inicio de sesión
+    document.getElementById("login-form").addEventListener("submit", (event) => {
         event.preventDefault();
 
-        const nombreInput = document.getElementById("nombre");
-        const nombreError = document.getElementById("nombre-error");
-        if (nombreInput.value.trim() === "") {
-            nombreError.textContent = "Por favor, ingresa tu nombre";
-            nombreInput.focus();
-            return false;
-        } else {
-            nombreError.textContent = "";
-        }
+        // Obtener datos del formulario
+        const email = document.getElementById("login-email").value;
+        const password = document.getElementById("login-password").value;
 
-        const emailInput = document.getElementById("email");
-        const emailError = document.getElementById("email-error");
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(emailInput.value.trim())) {
-            emailError.textContent = "Por favor, ingresa un correo electrónico válido";
-            emailInput.focus();
-            return false;
-        } else {
-            emailError.textContent = "";
-        }
+        // Verificar credenciales
+        const registeredUser = JSON.parse(localStorage.getItem("RegisteredUser"));
+        if (registeredUser && email === registeredUser.email && password === registeredUser.password) {
+            // Guardar usuario logueado en Local Storage
+            const loggedUser = {
+                email: registeredUser.email,
+                password: registeredUser.password,
+                name: registeredUser.name
+            };
+            localStorage.setItem("LoggedUser", JSON.stringify(loggedUser));
 
-        const passwordInput = document.getElementById("password");
-        const passwordError = document.getElementById("password-error");
-        if (passwordInput.value.length < 6) {
-            passwordError.textContent = "La contraseña debe tener al menos 6 caracteres";
-            passwordInput.focus();
-            return false;
+            // Redireccionar al perfil
+            redirectToProfile();
         } else {
-            passwordError.textContent = "";
+            alert("Credenciales incorrectas. Inténtelo de nuevo.");
         }
-
-        form.submit();
     });
+
+    // Redireccionar al perfil
+    function redirectToProfile() {
+        window.location.href = "HTML/Perfil.html";
+    }
+
+    // Eliminar sesión y ocultar botón de perfil al hacer clic en el botón de perfil
+    profileBtn.addEventListener("click", () => {
+        localStorage.removeItem("LoggedUser");
+        toggleButtons(false);
+    });
+
+    // Función para mostrar u ocultar botones
+    function toggleButtons(loggedIn) {
+        if (loggedIn) {
+            userBtn.style.display = "none";
+            profileBtn.style.display = "inline-block";
+        } else {
+            userBtn.style.display = "inline-block";
+            profileBtn.style.display = "none";
+        }
+    }
 });

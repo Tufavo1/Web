@@ -48,7 +48,7 @@ $(document).ready(function () {
         let card = $(this).closest(".card");
         let id = card.data("id");
         let nombre = card.find(".card-title").text();
-        let precio = parseFloat(card.find(".card-price").text());
+        let precio = parseFloat(card.find("#Precio").text().trim());
         let cantidad = parseInt(card.find(".counter-value").val());
         let imagen = card.find(".card-img-top").attr("src");
 
@@ -60,7 +60,7 @@ $(document).ready(function () {
         carrito = carrito.filter((producto) => producto.id !== id);
         localStorage.setItem("carrito", JSON.stringify(carrito));
         actualizarCarrito();
-    });
+    });    
 
     $("#vaciar-carrito").click(function () {
         carrito = [];
