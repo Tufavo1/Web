@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const logoutLink = document.querySelector('#profile-btn .dropdown-menu .dropdown-item[href="#"]');
     logoutLink.addEventListener('click', function () {
         localStorage.removeItem('LoggedInUser');
-        window.location.href = 'Restaurant.html';
-    });
+        window.location.href = '../index.html';
+    });    
     
     document.getElementById("user-cart").addEventListener("click", function () {
         document.getElementById("cart-content").style.display = "block";
