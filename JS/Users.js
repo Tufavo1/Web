@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', function () {
             userInfoContainer.innerHTML = '';
 
             const fullNameParagraph = document.createElement('p');
-            fullNameParagraph.innerHTML = `<strong>Nombre Completo:</strong> ${loggedInUser.name} ${loggedInUser.lastname}`;
+            fullNameParagraph.innerHTML = `<strong>${loggedInUser.name} ${loggedInUser.lastname}</strong>`;
 
             const birthdayParagraph = document.createElement('p');
-            birthdayParagraph.innerHTML = `<strong>Fecha de Nacimiento:</strong> ${loggedInUser.birthday}`;
+            birthdayParagraph.innerHTML = `<strong>${loggedInUser.birthday}</strong>`;
 
             const emailInput = document.createElement('input');
             emailInput.setAttribute('type', 'email');
