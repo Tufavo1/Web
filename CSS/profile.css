@@ -206,6 +206,11 @@ button[type="submit"]:hover {
     color: #000 !important;
 }
 
+.btn-profile {
+    width: auto;
+    margin-right: 10px;
+}
+
 svg {
     margin-right: 2px;
 }
@@ -308,6 +313,7 @@ span {
     border: 1px solid #ebf909 !important;
     z-index: 1;
 }
+
 
 .dropdown-menu li {
     padding: 10px;
