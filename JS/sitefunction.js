@@ -1,14 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const slides = document.querySelectorAll('.slide');
     const loggedInUser = JSON.parse(localStorage.getItem('LoggedInUser'));
-    const buttons = document.querySelectorAll('.btn-select');
-
-    buttons.forEach(button => {
-        button.addEventListener('click', function () {
-            buttons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-        });
-    });
 
     function updateButtonVisibilityAndGreeting(user) {
         const userButton = document.getElementById('user-btn');

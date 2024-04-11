@@ -18,7 +18,7 @@ $(document).ready(function () {
         carrito.forEach((producto) => {
             let fila = `
                 <tr>
-                    <td><img src="${producto.imagen}" width="50"></td>
+                    <td><img src="${producto.imagen}" width="250px" height="auto"></td>
                     <td>${producto.nombre}</td>
                     <td>${producto.cantidad}</td>
                     <td>$${producto.precio}</td>
