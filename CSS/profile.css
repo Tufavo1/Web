@@ -228,7 +228,33 @@ table th {
     align-items: center;
 }
 
-/*Estilos del panel*/
+/*Estilos para el reloj*/
+#clock-container {
+    position: fixed;
+    bottom: 200px;
+    left: 30px;
+    border: 4px solid #f4fd1d;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    background-color: #000;
+    padding: 10px;
+}
+
+#config-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-right: 4px solid #f4fd1d;
+}
+
+#clock {
+    color: #fff;
+}
+
 /*Estilos del panel*/
 .user-panel {
     overflow-y: scroll;

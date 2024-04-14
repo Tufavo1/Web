@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const botones = document.querySelectorAll(".btn-select");
     const sections = document.querySelectorAll(".row");
 
+
     let currSlide = 0;
     let maxSlide = slides.length - 1;
 
@@ -51,14 +52,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     botones.forEach(button => {
-        button.addEventListener("click", () => {
-            const id = button.id;
+        button.addEventListener("change", () => {
+            const id = button.value;
             sections.forEach(section => {
-                if (section.id === id) {
-                    section.style.display = "block";
-                } else {
-                    section.style.display = "none";
-                }
+                    section.style.display = (section.id === id) ? "block" : "none";
             });
         });
     });

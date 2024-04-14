@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById("color-change-btn").addEventListener("click", function () {
+        document.querySelector(".slide-content").style.backgroundColor = "white";
+        document.querySelector(".slide.active .btn-warning").style.backgroundColor = "orange";
+        document.querySelector(".slide.active .btn-warning").style.color = "black";
+    });
+
+    var configDropdown = document.getElementById("config-dropdown");
+    var configButton = document.getElementById("config-button");
+
+    configButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+        configDropdown.style.display = (configDropdown.style.display === 'none') ? 'block' : 'none';
+    });
+
+    document.addEventListener("click", function () {
+        configDropdown.style.display = 'none';
+    });
+
     const slides = document.querySelectorAll('.slide');
     const loggedInUser = JSON.parse(localStorage.getItem('LoggedInUser'));
 
@@ -22,8 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
     logoutLink.addEventListener('click', function () {
         localStorage.removeItem('LoggedInUser');
         window.location.href = '../index.html';
-    });    
-    
+    });
+
     document.getElementById("user-cart").addEventListener("click", function () {
         document.getElementById("cart-content").style.display = "block";
         document.getElementById("profile-content").style.display = "none";
@@ -67,4 +85,40 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+    interact('#clock-container').draggable({
+        inertia: true,
+        autoScroll: true,
+        onmove: dragMoveListener
+    });
+
+    function dragMoveListener(event) {
+        var target = event.target;
+        var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
+        var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
+
+        target.style.webkitTransform = target.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
+
+        target.setAttribute('data-x', x);
+        target.setAttribute('data-y', y);
+    }
+
+    interact.maxInteractions(Infinity);
+
+    function updateClock() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+
+        hours = String(hours).padStart(2, '0');
+        minutes = String(minutes).padStart(2, '0');
+        seconds = String(seconds).padStart(2, '0');
+
+        document.getElementById('clock').textContent = hours + ':' + minutes + ':' + seconds;
+    }
+
+    setInterval(updateClock, 1000);
+
+    updateClock();
 });
