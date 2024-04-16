@@ -434,6 +434,7 @@ button[type="submit"]:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     background-color: #000;
     padding: 10px;
+    z-index: 9999 !important;
 }
 
 #config-button {
@@ -495,8 +496,9 @@ button[type="submit"]:hover {
 /*Estilos para la imagen de fondo*/
 .background-image {
     width: 100%;
-    height: 890px;
+    height: 640px;
     background-image: url('../IMG/fondo-almuerzos.jpg');
+    align-items: center;
     background-size: cover;
     overflow: hidden;
     background-position: center;
@@ -506,30 +508,32 @@ button[type="submit"]:hover {
     font-size: 80px;
     font-weight: bold;
     text-align: center;
-    color: #fff;
+    color: #f4fd1d;
 }
 
 .centered-text {
     position: absolute;
     top: 50%;
-    left: 30%;
-    background-color: #000;
-    border-radius: 10px;
-    padding: 15px;
+    left: 20%;
     animation: bounce 2s infinite;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    -webkit-animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
-    }
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
     50% {
-        transform: translateY(-20px);
-    }
+        transform: translateY(-25px);
+        -webkit-transform: translateY(-25px);
+        -moz-transform: translateY(-25px);
+        -ms-transform: translateY(-25px);
+        -o-transform: translateY(-25px);
+}
 }
 
 /*Estilos para el filtro*/
@@ -817,7 +821,6 @@ label[for="price-range"] {
 .footer {
     background-color: #fff;
     color: #000 !important;
-    margin-top: 15%;
     border-radius: 105px 105px 0 0;
     -webkit-border-radius: 105px 105px 0 0;
     -moz-border-radius: 105px 105px 0 0;
@@ -896,4 +899,109 @@ label[for="price-range"] {
     color: #000;
     font-weight: 400;
     padding: 10px;
+}
+
+/*Media Queries para responsividad personalizada para pantallas pequennias*/
+@media screen and (max-width: 768px) {
+
+    /*Estilos para el panel de usuario y carrito*/
+    .user-panel {
+        width: 438px;
+        border-radius: 225px 0 0 225px;
+        -webkit-border-radius: 225px 0 0 225px;
+        -moz-border-radius: 225px 0 0 225px;
+        -ms-border-radius: 225px 0 0 225px;
+        -o-border-radius: 225px 0 0 225px;
+    }
+
+    #login-form {
+        margin-top: 165px;
+    }
+
+    #registration-form {
+        margin-top: 60px;
+    }
+
+    #lista-carrito {
+        margin-top: 150px;
+        margin-left: 26px;
+        width: 300px;
+    }
+
+    #lista-carrito :where(tr) {
+        border: none;
+        color: #000;
+        padding: 20px;
+    }
+
+    #carrito-body :where(img) {
+        overflow: hidden;
+    }
+
+    .title-panel {
+        background-color: #000;
+        padding: 10px;
+        color: #fff;
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+    }
+
+    .beneficios {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .copyright {
+        text-align: center;
+        width: 97%;
+        margin: 0 auto;
+    }
+
+
+
+    /*Estilos para el footer*/
+    .footer .container {
+        text-align: center;
+    }
+
+    .footer .container .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .container .col-md-6 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .form :where(h5) {
+        margin-bottom: -20px;
+        font-weight: 600;
+    }
+
+    .contact :where(h5) {
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: 600;
+        transform: uppercase;
+        -webkit-transform: uppercase;
+        -moz-transform: uppercase;
+        -ms-transform: uppercase;
+        -o-transform: uppercase;
+    }
+
+    .contact :where(p) {
+        display: flex;
+        margin: 0 auto;
+        margin-bottom: 5px;
+    }
+
+    .contact :where(a) {
+        padding: 5px;
+    }
 }
