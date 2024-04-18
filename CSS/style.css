@@ -1,6 +1,5 @@
 * {
     font-family: monospace;
-    font-weight: bold;
 }
 
 body {
@@ -102,30 +101,66 @@ span {
     left: 600px;
 }
 
-table {
-    width: 600px;
-    margin: 20px 5px;
-    margin-top: 60px;
+.titulo-cart {
+    color: #000 !important;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: -70px;
+    font-weight: bold;
 }
 
-table th,
-table td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #000;
+#lista-carrito {
+    margin: 0 auto;
+    width: 95%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-in-out;
+    margin-top: 100px;
 }
 
-table th {
+#lista-carrito :where(th, td) {
+    padding: 15px;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+#lista-carrito :where(th) {
     background-color: #000;
     color: #fff;
-    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-.container-cart .btn-container {
+#lista-carrito tbody tr:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+#lista-carrito :where(tfoot) {
+    font-weight: bold;
+    background-color: #000;
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-container {
     text-align: right;
 }
 
 .btn-cart {
+    margin-top: 30px;
     padding: 5px;
     background-color: #000;
     color: #fff;
@@ -140,8 +175,8 @@ table th {
 
 .btn-cart:hover {
     background-color: #f4fd1d;
-    color: #fff;
-    border-color: #fff;
+    color: #000;
+    border-color: #000;
 }
 
 /*Estilos del carrito de forma interna es decir que el tbody*/
@@ -288,8 +323,8 @@ table th {
     overflow-y: scroll;
     position: fixed;
     top: 0;
-    right: -600px;
-    width: 600px;
+    right: -650px;
+    width: 650px;
     height: 100%;
     background-color: #fff;
     color: #000;
@@ -844,7 +879,7 @@ p {
 
     /*Estilos para el panel de usuario y carrito*/
     .user-panel {
-        width: 438px;
+        width: 100%;
         border-radius: 225px 0 0 225px;
         -webkit-border-radius: 225px 0 0 225px;
         -moz-border-radius: 225px 0 0 225px;
@@ -860,20 +895,19 @@ p {
         margin-top: -10px;
     }
 
+    .titulo-cart {
+        margin-top: 160px;
+        margin-bottom: -120px;
+    }
+
     #lista-carrito {
-        margin-top: 150px;
-        margin-left: 26px;
-        width: 300px;
-    }
-
-    #lista-carrito :where(tr) {
-        border: none;
-        color: #000;
-        padding: 20px;
-    }
-
-    #carrito-body :where(img) {
+        margin: 0 auto;
+        width: 98%;
+        border-collapse: collapse;
+        border-radius: 10px;
         overflow: hidden;
+        animation: fadeIn 0.5s ease-in-out;
+        margin-top: 150px;
     }
 
     .title-panel {

@@ -11,12 +11,11 @@ html {
     background-color: #000 !important;
 }
 
-/*Estilos para el header nav*/
+/*Estilos para el header slide 1*/
 .navbar {
     color: #000;
     width: 100%;
     background-color: #000;
-    height: auto;
 }
 
 .navbar-brand img {
@@ -33,7 +32,6 @@ html {
     text-align: center;
 }
 
-
 .navbar-toggler {
     color: #000;
     margin-left: auto;
@@ -47,15 +45,27 @@ html {
 .btn {
     margin-left: 10px;
     color: #fff !important;
+    background-color: #000 !important;
+    padding: 10px;
 }
 
 .btn:hover {
     background-color: #f4fd1d !important;
     color: #000 !important;
+    border: 2px solid #fff !important;
 }
 
 svg {
     margin-right: 2px;
+}
+
+span {
+    font-size: 15px;
+}
+
+.copyright {
+    font-size: 15px;
+    margin-bottom: 10px;
 }
 
 /*Estilos para el carrito*/
@@ -77,7 +87,7 @@ svg {
 }
 
 table {
-    width: 100%;
+    width: 600px;
     margin: 20px 5px;
     margin-top: 60px;
 }
@@ -90,10 +100,9 @@ table td {
 }
 
 table th {
-    background-color: #fff;
-    color: #000;
+    background-color: #000;
+    color: #fff;
     text-align: center;
-    border-top: 1px solid #000;
 }
 
 .container-cart .btn-container {
@@ -134,18 +143,13 @@ table th {
 
 #carrito-body tr:hover {
     background-color: #000;
-    color: #fff;
     transition: background-color 0.3s ease;
-    -webkit-transition: background-color 0.3s ease;
-    -moz-transition: background-color 0.3s ease;
-    -ms-transition: background-color 0.3s ease;
-    -o-transition: background-color 0.3s ease;
+    color: #fff;
 }
 
 #carrito-body td {
     padding: 15px;
     text-align: center;
-    margin-top: 10px;
 }
 
 #carrito-body .btn-eliminar-producto {
@@ -184,12 +188,18 @@ table th {
     margin-right: 5px;
 }
 
-.dropdown-menu {
+.dropdown-nav {
     display: none;
     position: absolute;
     background-color: #000 !important;
-    border: 1px solid #ebf909 !important;
     z-index: 1;
+    right: 8px;
+    border-bottom: 2px solid #f4fd1d !important;
+    border-radius: 0 0 30px 30px !important;
+    -webkit-border-radius: 0 0 30px 30px !important;
+    -moz-border-radius: 0 0 30px 30px !important;
+    -ms-border-radius: 0 0 30px 30px !important;
+    -o-border-radius: 0 0 30px 30px !important;
 }
 
 .dropdown-menu li {
@@ -226,6 +236,172 @@ table th {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/*Estilos para el boton perfil*/
+#user-menu {
+    position: absolute;
+    top: 100%;
+    /* Posición debajo del botón */
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#user-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#user-menu ul li {
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+#user-menu ul li:hover {
+    background-color: #f0f0f0;
+}
+
+
+/*Estilos del modal*/
+.user-panel {
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    right: -600px;
+    width: 600px;
+    height: 100%;
+    background-color: #fff;
+    color: #000;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 9999;
+}
+
+.user-panel.open {
+    right: 0;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+}
+
+.close:hover {
+    color: #f4fd1d !important;
+}
+
+.container-form {
+    width: 350px;
+    margin: 0 auto;
+    padding: 30px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.title-panel {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"] {
+    margin: 0 auto;
+    width: 250px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    text-align: center;
+    padding: 8px;
+}
+
+button[type="submit"] {
+    display: flex;
+    justify-content: center;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff7f50;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+}
+
+.forgot-password {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    color: #ff7f50 !important;
+}
+
+.forgot-password:hover {
+    color: #000 !important;
+}
+
+.parrafo-panel {
+    margin-top: 15px;
+    text-align: center;
+    color: #000 !important;
+}
+
+#register-form {
+    display: none;
+}
+
+#register-form.visible {
+    display: block;
+}
+
+#register-link,
+#login-link {
+    color: #ff6347;
+}
+
+#register-link:hover,
+#login-link:hover {
+    text-decoration: underline;
+    color: #ff9900;
+}
+
+.contain-panel {
+    text-align: center;
+}
+
+.beneficios {
+    color: #000 !important;
+}
+
+.copyright {
+    color: #000 !important;
 }
 
 /*Estilos para el reloj*/
@@ -305,8 +481,8 @@ table th {
     overflow-y: scroll;
     position: fixed;
     top: 0;
-    right: -600px;
-    width: 600px;
+    right: -800px;
+    width: 800px;
     height: 100%;
     background-color: #fff;
     color: #000;
@@ -481,11 +657,12 @@ input:hover {
     background-color: #f4fd1d;
     padding: 10px;
     color: #000;
+    border: none;
     border-radius: 25px;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
-    -o-border-radius: 25px
+    -o-border-radius: 25px;
 }
 
 .btn-main:hover {
@@ -507,12 +684,23 @@ input:hover {
 
 .img-card {
     margin-top: 20px;
+    width: 100px;
 }
 
 .table {
     background-color: #000;
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
+}
+
+.table :where(th, td) {
+    background-color: #f4fd1d !important;
+    border-top: 3px solid #fff !important;
+    border-bottom: 3px solid #fff !important;
+    text-align: center;
+    color: #000;
+    font-weight: 900;
+    font-size: 15px;
 }
 
 .card-buy {
@@ -525,6 +713,24 @@ input:hover {
     -ms-border-radius: 25px 25px 0 0;
     -o-border-radius: 25px 25px 0 0;
     border: 2px solid #ebf909;
+}
+
+.btn-suscripcion {
+    padding: 10px;
+    background-color: #f4fd1d;
+    color: #000;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border: none;
+}
+
+.btn-suscripcion:hover {
+    background-color: #fff;
+    color: #000;
 }
 
 /*Estilos para el footer*/
@@ -637,20 +843,19 @@ input:hover {
         margin-top: 60px;
     }
 
+    .titulo-cart {
+        margin-top: 160px;
+        margin-bottom: -120px;
+    }
+
     #lista-carrito {
-        margin-top: 150px;
-        margin-left: 26px;
-        width: 300px;
-    }
-
-    #lista-carrito :where(tr) {
-        border: none;
-        color: #000;
-        padding: 20px;
-    }
-
-    #carrito-body :where(img) {
+        margin: 0 auto;
+        width: 98%;
+        border-collapse: collapse;
+        border-radius: 10px;
         overflow: hidden;
+        animation: fadeIn 0.5s ease-in-out;
+        margin-top: 150px;
     }
 
     .title-panel {

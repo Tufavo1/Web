@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+    var btnComprar = document.getElementById("btn-comprar");
+    if (btnComprar) {
+        btnComprar.addEventListener("click", function (event) {
+            var carrito = JSON.parse(localStorage.getItem("carrito"));
+            if (carrito === null || carrito.length === 0) {
+                event.preventDefault();
+                alert("¡Tienes que agregar productos al carrito para ir a comprar!");
+            }
+        });
+    }
+    
     document.getElementById("color-change-btn").addEventListener("click", function () {
         document.querySelector(".slide-content").style.backgroundColor = "white";
         document.querySelector(".slide.active .btn-warning").style.backgroundColor = "orange";
@@ -43,9 +55,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     document.getElementById("user-cart").addEventListener("click", function () {
-        document.getElementById("cart-content").style.display = "block";
-        document.getElementById("profile-content").style.display = "none";
-        document.getElementById("user-panel").classList.add("open");
+        let userCart = document.getElementById("user-cart");
+        if (userCart) {
+            userCart.addEventListener("click", function () {
+                let cartContent = document.getElementById("cart-content");
+                if (cartContent) {
+                    cartContent.style.display = "block";
+                }
+
+                let profileContent = document.getElementById("profile-content");
+                if (profileContent) {
+                    profileContent.style.display = "none";
+                }
+
+                let userPanel = document.getElementById("user-panel");
+                if (userPanel) {
+                    userPanel.classList.add("open");
+                }
+            });
+        }
     });
 
     document.getElementById("user-btn").addEventListener("click", function () {
