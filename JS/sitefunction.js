@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var carrito = JSON.parse(localStorage.getItem("carrito"));
             if (carrito === null || carrito.length === 0) {
                 event.preventDefault();
-                alert("¡Tienes que agregar productos al carrito para ir a comprar!");
+                alert("!Tienes que agregar productos al carrito¡");
             }
         });
     }

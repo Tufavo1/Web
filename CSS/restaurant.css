@@ -75,30 +75,66 @@ svg {
     left: 600px;
 }
 
-table {
-    width: 600px;
-    margin: 20px 5px;
-    margin-top: 60px;
+.titulo-cart {
+    color: #000 !important;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: -70px;
+    font-weight: bold;
 }
 
-table th,
-table td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #000;
+#lista-carrito {
+    margin: 0 auto;
+    width: 95%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-in-out;
+    margin-top: 100px;
 }
 
-table th {
+#lista-carrito :where(th, td) {
+    padding: 15px;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+#lista-carrito :where(th) {
     background-color: #000;
     color: #fff;
-    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-.container-cart .btn-container {
+#lista-carrito tbody tr:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+#lista-carrito :where(tfoot) {
+    font-weight: bold;
+    background-color: #000;
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-container {
     text-align: right;
 }
 
 .btn-cart {
+    margin-top: 30px;
     padding: 5px;
     background-color: #000;
     color: #fff;
@@ -109,12 +145,13 @@ table th {
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     margin-left: 5px;
+    margin-bottom: 30px;
 }
 
 .btn-cart:hover {
     background-color: #f4fd1d;
-    color: #fff;
-    border-color: #fff;
+    color: #000;
+    border-color: #000;
 }
 
 /*Estilos del carrito de forma interna es decir que el tbody*/
@@ -161,7 +198,6 @@ table th {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 /* Estilos para el nav-item */
 .nav-item {
     list-style: none;
