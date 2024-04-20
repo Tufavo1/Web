@@ -28,8 +28,9 @@
 
             <div class="btns collapse navbar-collapse" id="navbarNav">
                 <div class="container-sb d-flex align-items-center mx-auto">
-                    <button class="btn btn-outline-light">Ubicacion <svg xmlns="http://www.w3.org/2000/svg" width="20"
-                            height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                    <button id="getLocationBtn" class="btn btn-outline-light">Ubicación <svg
+                            xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                             <path
                                 d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
                         </svg></button>
@@ -296,12 +297,57 @@
                                 alt="Avatar">
                             <h4>Suscripcion</h4>
                             <div class="mb-5">
-                                <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nobis fugit
-                                    similique hic ipsa, at temporibus laboriosam voluptates laudantium voluptatum.
-                                    Consequatur eaque, illum hic voluptates mollitia facere quas doloremque asperiores?
+                                <h5> Descubre una nueva forma de disfrutar con nuestra suscripción exclusiva. Cada mes,
+                                    recibirás una selección cuidadosamente curada de productos sorpresa, desde delicias
+                                    gourmet hasta productos artesanales únicos. Explora nuevos sabores, productos de
+                                    temporada y regalos especiales entregados directamente en tu puerta. Únete a nuestra
+                                    comunidad de suscriptores y déjate sorprender con cada entrega.
                                 </h5>
                             </div>
                             <button class="btn-suscripcion">Suscribirse</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-admin" style="display: none;">
+            <div class="container-cards">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="card-product mt-5">
+                            <div class="card-body text-center">
+                                <form id="product-form">
+                                    <input type="number" id="product-id" placeholder="ID" required>
+                                    <input type="url" id="product-image" placeholder="URL de la imagen" required>
+                                    <input type="text" id="product-title" placeholder="Título" required>
+                                    <textarea id="product-description" placeholder="Descripción" required></textarea>
+                                    <input type="number" id="product-price" placeholder="Precio" required>
+                                    <select id="product-category" required>
+                                        <option value="restaurantes">Restaurantes</option>
+                                        <option value="almuerzos">Almuerzos</option>
+                                        <option value="jugos">Jugos</option>
+                                        <option value="licores">Licores</option>
+                                        <option value="postres">Postres</option>
+                                    </select>
+                                    <button type="submit">Agregar Producto</button>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="card-view-product mt-5">
+                            <div class="card-body text-center">
+                                <h4>Ver productos de:</h4>
+                                <select id="category-select">
+                                    <option value="categorias/almuerzos.html">Almuerzos</option>
+                                    <option value="jugos.html">Jugos</option>
+                                    <option value="licores.html">Licores</option>
+                                    <option value="postres.html">Postres</option>
+                                </select>
+                                <div id="product-list"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -406,5 +452,7 @@
 <script src="../JS/Users.js"></script>
 <script src="../JS/cart.js"></script>
 <script src="../JS/sitefunction.js"></script>
+<script src="../JS/admin.js"></script>
+<script src="../JS/adminfunction.js"></script>
 
 </html>
