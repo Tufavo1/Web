@@ -704,6 +704,18 @@ label[for="price-range"] {
     font-weight: 900;
 }
 
+.Card-categoria {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.Card-stock {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+}
+
 .counter {
     display: flex;
     justify-content: center;

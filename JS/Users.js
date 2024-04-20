@@ -110,25 +110,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
     loginForm.addEventListener('submit', function (event) {
         event.preventDefault();
-    
+
         const email = document.getElementById('login-email').value;
         const password = document.getElementById('login-password').value;
-        
+
         if (!localStorage.getItem('LoggedInUser') && !localStorage.getItem('RegisteredUsers')) {
             showAlert('Usuario no registrado. Por favor, regístrate para acceder.');
             return;
         }
-    
+
         const registeredUsers = JSON.parse(localStorage.getItem('RegisteredUsers'));
         const user = registeredUsers.find(u => u.email === email && u.password === password);
-    
+
         if (user) {
             localStorage.setItem('LoggedInUser', JSON.stringify(user));
             window.location.href = '../HTML/Perfil.html';
         } else {
             showAlert('Correo o contraseña inválidos. Por favor, intenta de nuevo.');
         }
-    });    
+    });
 
     registrationForm.addEventListener('submit', function (event) {
         event.preventDefault();
@@ -140,6 +140,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const email = document.getElementById('register-email').value;
         const password = document.getElementById('register-password').value;
 
+        if (!name || !lastname || !birthday || !phone || !email || !password) {
+            alert('Por favor, completa todos los campos del formulario.');
+            return;
+        }
+
         const user = {
             name: name,
             lastname: lastname,
@@ -150,7 +155,9 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         let registeredUsers = JSON.parse(localStorage.getItem('RegisteredUsers')) || [];
+
         registeredUsers.push(user);
+
         localStorage.setItem('RegisteredUsers', JSON.stringify(registeredUsers));
 
         document.getElementById('register-name').value = '';
@@ -163,4 +170,5 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('login-form').style.display = 'block';
         document.getElementById('register-form').style.display = 'none';
     });
+
 });

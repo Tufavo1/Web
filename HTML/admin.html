@@ -4,15 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpartSagan - Restaurante</title>
-
+    <title>Bienvenido - Admin</title>
+    <link rel="stylesheet" href="../CSS/admin.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../CSS/restaurant.css">
-    <link rel="icon" href="../IMG/logo.png" type="image/svg+xml">
+    <link rel="icon" href="../IMG/logo.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.10.27/interact.min.js"></script>
 </head>
 
@@ -37,13 +35,13 @@
                             <path
                                 d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
                         </svg></button>
-                    <a class="btn" href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
-                        </svg><span>Home</span>
+                    <a class="btn" href="../categorias/Restaurant.html"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                        </svg><span>Restaurant</span>
                     </a>
-                    <a class="btn" href="../HTML/contacto.html"><svg xmlns="http://www.w3.org/2000/svg" width="25"
+                    <a class="btn" href="#acerca-nosotros"><svg xmlns="http://www.w3.org/2000/svg" width="25"
                             height="25" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
                             <path
                                 d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z" />
@@ -77,9 +75,9 @@
                             <span></span>
                         </a>
                         <ul class="dropdown-nav dropdown-menu">
-                            <li><a class="dropdown-item" href="../HTML/Perfil.html"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                        class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <li><a class="dropdown-item" href="HTML/Perfil.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="20" height="20" fill="currentColor" class="bi bi-person-fill"
+                                        viewBox="0 0 16 16">
                                         <path
                                             d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                                     </svg>Ver Perfil</a></li>
@@ -104,7 +102,7 @@
                                 <h1 class="titulo-cart">Productos</h1>
                                 <thead>
                                     <tr>
-                                        <th class="left-table">Imagen</th>
+                                        <th class="left-table text-center">Imagen</th>
                                         <th>Platillo</th>
                                         <th>Cantidad</th>
                                         <th>Precio</th>
@@ -114,8 +112,8 @@
                                 <tbody id="carrito-body"></tbody>
                                 <tfoot>
                                     <tr>
-                                        <td colspan="5">Subtotal:</td>
-                                        <td id="total">$0</td>
+                                        <td class="subtotal text-center" colspan="3">Subtotal:</td>
+                                        <td class="subtotal text-start" id="total">$0</td>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -128,13 +126,13 @@
                                                 d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
                                         </svg>Vaciar Carrito</button>
                                 </a>
-                                <a id="btn-comprar" href="carrito.html">
+                                <a id="btn-comprar" href="HTML/carrito.html">
                                     <button class="btn-cart">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-basket2-fill" viewBox="0 0 16 16">
                                             <path
                                                 d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1" />
-                                        </svg>Revisar Carrito</button>
+                                        </svg>Ver Carrito</button>
                                 </a>
                             </div>
                         </div>
@@ -248,204 +246,6 @@
                 </div>
     </nav>
 
-    <section class="container-motion">
-        <div class="carousel-wrapper">
-            <div class="slide" data-slide>
-                <img src="../IMG/comida.jpg">
-            </div>
-            <div class="slide" data-slide>
-                <img src="../IMG/bar.jpg" alt="image">
-            </div>
-
-            <button class="btn-carousel previous" data-button="previous">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                    class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
-                </svg>
-            </button>
-            <button class="btn-carousel next" data-button="next">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                    class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
-                </svg>
-            </button>
-        </div>
-    </section>
-
-    <div class="filter">
-        <div class="container-filter">
-            <div class="container-btn-filter">
-                <button class="btn-filter" id="filter-button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                        class="bi bi-funnel-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5z" />
-                    </svg>
-                    <span>Filtrar</span>
-                </button>
-                <div class="filter-panel" id="filter-panel">
-                    <button id="close-filter" class="btn close-button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-x" viewBox="0 0 16 16">
-                            <path
-                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                        </svg>
-                    </button>
-                    <form id="filter-form" class="text-black">
-                        <h4>Filtrar Opciones</h4>
-                        <div class="form-group">
-                            <label for="price-range">Rango de Precio:</label>
-                            <select class="form-control" id="price-range">
-                                <option value="0-10000">$0 - $10,000</option>
-                                <option value="11000-30000">$11,000 - $30,000</option>
-                                <option value="31000-50000">$31,000 - $50,000</option>
-                                <option value="51000-70000">$51,000 - $70,000</option>
-                                <option value="71000-90000">$71,000 - $90,000</option>
-                                <option value="91000-100000">$91,000 - $100,000</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Aplicar Filtro</button>
-                    </form>
-                </div>
-            </div>
-
-            <form class="search d-flex" role="search">
-                <input id="search-input" class="form-control" type="search" placeholder="Buscar" aria-label="Search">
-            </form>
-            <div id="search-results" class="mt-3"></div>
-
-            <div class="container-btn-select">
-                <div class="dropdown">
-                    <button class="btn-select dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Selecciona las secciones
-                    </button>
-                    <ul id="category-select" class="dropdown-filter dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li><a class="dropdown-item" href="#" disabled>Todos los Platillos</a>
-                        </li>
-                        <li><a class="dropdown-item" href="../categorias/almuerzos.html">Almuerzos</a></li>
-                        <li><a class="dropdown-item" href="../categorias/postres.html">Postres</a></li>
-                        <li><a class="dropdown-item" href="../categorias/jugos.html">Bebidas</a></li>
-                        <li><a class="dropdown-item" href="../categorias/licores.html">Licores</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section id="menu" class="py-5">
-        <div class="container">
-            <h1 class="menu-title text-black fw-bolder">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                    class="bi bi-star-fill star" viewBox="0 0 16 16">
-                    <path
-                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg> Revisa todo Nuestro Menu <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                    fill="currentColor" class="bi bi-star-fill star" viewBox="0 0 16 16">
-                    <path
-                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-            </h1>
-            <div class="container-card" id="allmain">
-                <div class="card" data-id="1">
-                    <img src="../IMG/comida.jpg" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h1 class="card-title">Platillo De Entrada</h1>
-                        <p class="card-text">Nuestra entrada de carne con verduras ofrece una combinación perfecta
-                            de tierna carne sazonada y verduras frescas, incluyendo zanahorias, brócoli, pimientos y
-                            champiñones, salteados a la perfección para crear un plato delicioso y satisfactorio.
-                        </p>
-                        <p class="card-price">Precio: $<span id="Precio">40000</span></p>
-                        <div class="counter">
-                            <button class="counter-btn decrement">-</button>
-                            <input class="counter-value" type="number" id="contador" placeholder="1" value="1" min="1"
-                                max="10" class="input-quantity" readonly></input>
-                            <button class="counter-btn increment">+</button>
-                        </div>
-                        <div class="button-container">
-                            <button class="btn-card">Ver Ingredientes</button>
-                            <button class="btn-card añadir-platillo">Añadir Platillo</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" data-id="2">
-                    <img src="../IMG/bar.jpg" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h1 class="card-title">Platillo De Entrada</h1>
-                        <p class="card-text">Descubre una experiencia de tragos excepcional con nuestra selección
-                            cuidadosamente
-                            elaborada. Desde clásicos como la Margarita y el Mojito hasta creaciones únicas como el
-                            Cosmopolitan y la Piña Colada, cada trago es una aventura de sabor. Con ingredientes
-                            frescos y licores de calidad, te invitamos a disfrutar de momentos inolvidables con
-                            nosotros.</p>
-                        <p class="card-price">Precio: $<span id="Precio">6000</span></p>
-                        <div class="counter">
-                            <button class="counter-btn decrement">-</button>
-                            <input class="counter-value" type="number" id="contador" placeholder="1" value="1" min="1"
-                                max="10" class="input-quantity" readonly></input>
-                            <button class="counter-btn increment">+</button>
-                        </div>
-                        <div class="button-container">
-                            <button class="btn-card">Ver Ingredientes</button>
-                            <button class="btn-card añadir-platillo">Añadir Platillo</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" data-id="3">
-                    <img src="../IMG/jugos.jpg" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h1 class="card-title">Platillo De Entrada</h1>
-                        <p class="card-text">Refresca tu día con nuestra variedad de jugos naturales, una explosión
-                            de frescura y sabor en cada sorbo. Desde el clásico jugo de naranja recién exprimido
-                            hasta exóticas mezclas de frutas tropicales, cada vaso está lleno de vitaminas y energía
-                            natural. Disfruta de la frescura de la naturaleza en cada gota con nuestra selección de
-                            jugos naturales.</p>
-                        <p class="card-price">Precio: $<span id="Precio">6000</span></p>
-                        <div class="counter">
-                            <button class="counter-btn decrement">-</button>
-                            <input class="counter-value" type="number" id="contador" placeholder="1" value="1" min="1"
-                                max="10" class="input-quantity" readonly></input>
-                            <button class="counter-btn increment">+</button>
-                        </div>
-                        <div class="button-container">
-                            <button class="btn-card">Ver Ingredientes</button>
-                            <button class="btn-card añadir-platillo">Añadir Platillo</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" data-id="4">
-                    <img src="../IMG/pizza.jpg" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h1 class="card-title">Platillo De Entrada</h1>
-                        <p class="card-text">Deléitate con nuestra irresistible selección de pizzas, cada una
-                            preparada con ingredientes frescos y sabrosos. Desde la clásica Margarita, con su salsa
-                            de tomate, mozzarella y albahaca fresca, hasta la audaz Pizza Pepperoni.</p>
-                        <p class="card-price">Precio: $<span id="Precio">5000</span></p>
-                        <div class="counter">
-                            <button class="counter-btn decrement">-</button>
-                            <input class="counter-value" type="number" id="contador" placeholder="1" value="1" min="1"
-                                max="10" class="input-quantity" readonly></input>
-                            <button class="counter-btn increment">+</button>
-                        </div>
-                        <div class="button-container">
-                            <button class="btn-card">Ver Ingredientes</button>
-                            <button class="btn-card añadir-platillo">Añadir Platillo</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-
-    <div class="anuncios">
-        <div class="container-anuncios">
-            <a
-                href="https://www.lider.cl/supermercado/?gad_source=1&gclid=Cj0KCQjwn7mwBhCiARIsAGoxjaJJedZoy2HsFtdfEI0QYpt89zGeyr3hln1NwI313XpwebS-BIrP2rgaAl80EALw_wcB&gclsrc=aw.ds"><img
-                    class="img-anuncios" src="../IMG/anuncios/Líder_logo.svg.png" alt="Anuncios Lider"></a>
-        </div>
-    </div>
-
     <div class="container-clock">
         <div id="clock-container" class="d-flex align-items-center">
             <div class="dropdown">
@@ -483,67 +283,216 @@
             <div id="clock" class="display-6"></div>
         </div>
     </div>
-
-    <footer class="footer text-black py-1">
-        <div class="container-footer">
-            <div class="contact" style="margin-top: 30px;">
-                <h5>Redes Sociales</h5>
-                <p><a href="https://www.gmail.com"
-                        style="color: #000; text-decoration: none; font-size: 15px; transition: color 0.3s; margin-left: 50px; margin-right: 10px;"
-                        onmouseover="this.style.color='#ebf909'" onmouseout="this.style.color='#000'">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="currentColor"
-                            class="bi bi-envelope" viewBox="0 0 16 16">
-                            <path
-                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
-                        </svg>VentasSpartSagan@gmail.com</a></p>
-                <p><a href="https://w.app/XP71fx"
-                        style="color: #000; text-decoration: none; font-size: 25px; transition: color 0.3s; margin-left: 50px; margin-right: 10px;"
-                        onmouseover="this.style.color='#ebf909'" onmouseout="this.style.color='#000'">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                            style="color: #000; background-color: #25D366; border-radius: 15px;" fill="currentColor"
-                            class="bi bi-whatsapp" viewBox="0 0 16 16">
-                            <path
-                                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
-                        </svg>WhatsApp</a></p>
-
-                <p><a href="https://github.com/Tufavo1/Web"
-                        style="color: #000; text-decoration: none; font-size: 15px; transition: color 0.3s; margin-left: 50px; margin-right: 10px;"
-                        onmouseover="this.style.color='#ebf909'" onmouseout="this.style.color='#000'">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-github" viewBox="0 0 16 16">
-                            <path
-                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
-                        </svg>Tufavo1</a>
-                </p>
-            </div>
-            <section class="formulario-vip">
-                <div class="form">
-                    <h5 style="text-align: center;">Suscríbete para recibir descuentos exclusivos</h5>
-                    <form class="container-form">
-                        <div class="input-group mb-3">
-                            <input type="email" class="form-control" placeholder="Correo Electrónico"
-                                aria-label="Correo Electrónico" aria-describedby="button-addon2"
-                                style="border: 4px solid #ebf909; text-align: center;">
-                            <button class="btn-footer" type="button" id="button-addon2">Suscribirse</button>
+    <main class="main-contain">
+        <div class="container-profile">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card-profile mt-5">
+                        <div class="card-body-profile text-center">
+                            <div class="rounded-circle img-fluid mb-4" alt="Avatar"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor"
+                                    class="bi bi-person-badge-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6m5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1z" />
+                                </svg></div>
+                            <form id="profile-form">
+                                <div class="mb-4" id="user-info">
+                                </div>
+                                <button type="button" id="edit-profile" class="btn-main">Editar Perfil</button>
+                                <button type="submit" id="save-profile" class="btn-main"
+                                    style="display: none;">Guardar</button>
+                                <button type="button" id="cancel-edit" class="btn-main"
+                                    style="display: none;">Cancelar</button>
+                            </form>
                         </div>
-                    </form>
+                    </div>
                 </div>
-            </section>
-            <div class="copyright">
-                <h6>&copy; 2024 Spartan Sagan. Todos los derechos reservados por tufavorito.</h6>
             </div>
         </div>
-    </footer>
+        <div class="container-fluid overflow-hidden pb-5" style="padding-top: 10rem">
+            <div class="row gx-5">
+                <div class="col-lg-6">
+                    <div class="container-Product content-box p-3">
+                        <h4>Gestión de Productos</h4>
+                        <p>
+                            La funcionalidad de administrar productos en Purrfect es una herramienta esencial para los
+                            administradores de la tienda en línea. Desde esta sección, pueden agregar nuevos productos,
+                            actualizar la información de los productos existentes, eliminar productos que ya no estén
+                            disponibles y administrar el inventario para garantizar que siempre haya suficiente stock
+                            disponible. Los administradores también pueden establecer precios, agregar descripciones
+                            detalladas y fotos de alta calidad para cada producto para facilitar la navegación de los
+                            clientes en la tienda en línea.
+                        </p>
+                        <button type="button" class="btn-product mb-3" data-bs-toggle="modal"
+                            data-bs-target="#nuevoProductoModal">Agregar Nuevo Producto</button>
+                        <div class="modal fade" id="nuevoProductoModal" tabindex="-1"
+                            aria-labelledby="nuevoProductoModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 id="nuevoProductoModalLabel">nuevo producto</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="formularioNuevoProducto">
+                                            <div class="mb-3">
+                                                <label for="selectCategoria" class="form-label">Categoría</label>
+                                                <select class="form-select" id="selectCategoria" required>
+                                                    <option value="Restaurante">Restaurante</option>
+                                                    <option value="Almuerzos">Almuerzos</option>
+                                                    <option value="Jugos">Jugos</option>
+                                                    <option value="Licores">Licores</option>
+                                                    <option value="Postres">Postres</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="inputId" class="form-label">ID</label>
+                                                <input type="text" class="form-modal" id="inputId" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="inputImagen" class="form-label">Imagen (URL)</label>
+                                                <input type="text" class="form-modal" id="inputImagen" required>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="inputNombre" class="form-label">Nombre</label>
+                                                <input type="text" class="form-modal" id="inputNombre" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="inputStock" class="form-label">Stock</label>
+                                                <input type="number" class="form-modal" id="inputStock" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="inputPrecio" class="form-label">Precio</label>
+                                                <input type="number" class="form-modal" id="inputPrecio" required>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Guardar</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Imagen</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Categoría</th>
+                                    <th scope="col">Stock</th>
+                                    <th scope="col">Precio</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-group-divider listaProductos">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="productoModal" tabindex="-1" aria-labelledby="productoModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="productoModalLabel">Detalles del Producto</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="formularioEditarProducto">
+                                    <div class="mb-3">
+                                        <label for="id-producto" class="form-label">ID</label>
+                                        <input type="text" class="form-control" id="id-producto" readonly>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="inputImagen" class="form-label">Imagen (URL)</label>
+                                        <input type="text" class="form-control" id="inputImagen" accept="image/*">
+                                    </div>
+
+
+                                    <div class="mb-3">
+                                        <label for="nombre-producto" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" id="nombre-producto">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="selectCategoria" class="form-label">Categoría</label>
+                                        <select class="form-select" id="selectCategoria">
+                                            <option value="Restaurante">Restaurante</option>
+                                            <option value="Almuerzos">Almuerzos</option>
+                                            <option value="Jugos">Jugos</option>
+                                            <option value="Licores">Licores</option>
+                                            <option value="Postres">Postres</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="inputStock" class="form-label">Stock</label>
+                                        <input type="number" class="form-control" id="inputStock">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="inputPrecio" class="form-label">Precio</label>
+                                        <input type="number" class="form-control" id="inputPrecio">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary" id="btn-guardar">Guardar Cambios</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="container-user content-box p-3">
+                        <h4>Gestión de Usuarios</h4>
+                        <form id="agregarUsuarioForm">
+                            <div class="mb-3">
+                                <label for="nombreUsuario" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombreUsuario" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="emailUsuario" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="emailUsuario" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contraseniaUsuario" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="contraseniaUsuario"
+                                    value="contraseña123" disabled>
+                                <small id="contraseniaHelp" class="form-text text-muted">La contraseña será:
+                                    contraseña123</small>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Agregar Usuario</button>
+                        </form>
+                        <table class="table mt-3">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="listaUsuarios">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
 </body>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="../JS/sitefunction.js"></script>
-<script src="../JS/script.js"></script>
+<script src="../JS/jquery.min.js"></script>
 <script src="../JS/cart.js"></script>
+<script src="../JS/sitefunction.js"></script>
+<script src="../JS/admin.js"></script>
+<script src="../JS/loadData.js"></script>
+<script src="../JS/jquery-3.7.1.min.js"></script>
 <script src="../JS/Users.js"></script>
+<script src="../JS/adminfunction.js"></script>
+<script src="../JS/jquery.validate.js"></script>
 
 </html>

@@ -44,7 +44,8 @@ $(document).ready(function () {
 
     cargarCarrito();
 
-    $(".añadir-platillo").click(function () {
+    // Delegación de eventos para el botón de añadir al carrito
+    $(document).on("click", ".añadir-platillo", function () {
         let card = $(this).closest(".card");
         let id = card.data("id");
         let nombre = card.find(".card-title").text();
@@ -60,25 +61,11 @@ $(document).ready(function () {
         carrito = carrito.filter((producto) => producto.id !== id);
         localStorage.setItem("carrito", JSON.stringify(carrito));
         actualizarCarrito();
-    });    
+    });
 
     $("#vaciar-carrito").click(function () {
         carrito = [];
         localStorage.removeItem("carrito");
         actualizarCarrito();
-    });
-
-    $(".counter-btn.increment").click(function () {
-        let counter = $(this).siblings(".counter-value");
-        let currentValue = parseInt(counter.val());
-        counter.val(currentValue + 1);
-    });
-
-    $(".counter-btn.decrement").click(function () {
-        let counter = $(this).siblings(".counter-value");
-        let currentValue = parseInt(counter.val());
-        if (currentValue > 1) {
-            counter.val(currentValue - 1);
-        }
     });
 });
