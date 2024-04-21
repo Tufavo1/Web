@@ -137,11 +137,17 @@ document.addEventListener('DOMContentLoaded', function () {
         const lastname = document.getElementById('register-lastname').value;
         const birthday = document.getElementById('register-birthday').value;
         const phone = document.getElementById('register-phone').value;
+        const rut = document.getElementById('register-rut').value;
+        const rutRegex = /^\d{1,2}\.\d{3}\.\d{3}-[0-9kK]$/;
+        if (!rutRegex.test(rut)) {
+            showAlert('Por favor, ingresa un RUT válido en el formato XX.XXX.XXX-X.');
+            return;
+        }
         const email = document.getElementById('register-email').value;
         const password = document.getElementById('register-password').value;
 
         if (!name || !lastname || !birthday || !phone || !email || !password) {
-            alert('Por favor, completa todos los campos del formulario.');
+            showAlert('Por favor, completa todos los campos del formulario.');
             return;
         }
 
@@ -150,6 +156,7 @@ document.addEventListener('DOMContentLoaded', function () {
             lastname: lastname,
             birthday: birthday,
             phone: phone,
+            rut: rut,
             email: email,
             password: password
         };
@@ -164,6 +171,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('register-lastname').value = '';
         document.getElementById('register-birthday').value = '';
         document.getElementById('register-phone').value = '';
+        document.getElementById('register-rut').value = '';
         document.getElementById('register-email').value = '';
         document.getElementById('register-password').value = '';
 

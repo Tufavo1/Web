@@ -41,7 +41,7 @@
                                 d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                         </svg><span>Restaurant</span>
                     </a>
-                    <a class="btn" href="#acerca-nosotros"><svg xmlns="http://www.w3.org/2000/svg" width="25"
+                    <a class="btn" href="../HTML/contacto.html"><svg xmlns="http://www.w3.org/2000/svg" width="25"
                             height="25" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
                             <path
                                 d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z" />
@@ -75,12 +75,6 @@
                             <span></span>
                         </a>
                         <ul class="dropdown-nav dropdown-menu">
-                            <li><a class="dropdown-item" href="HTML/Perfil.html"><svg xmlns="http://www.w3.org/2000/svg"
-                                        width="20" height="20" fill="currentColor" class="bi bi-person-fill"
-                                        viewBox="0 0 16 16">
-                                        <path
-                                            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                                    </svg>Ver Perfil</a></li>
                             <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20"
                                         height="20" fill="currentColor" class="bi bi-door-closed-fill"
                                         viewBox="0 0 16 16">
@@ -152,7 +146,7 @@
                                             <path
                                                 d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
                                         </svg>
-                                        <input type="email" id="login-email" name="login-email"
+                                        <input class="Form-input" type="email" id="login-email" name="login-email"
                                             placeholder="Ingresa Tu Correo" required>
                                     </div>
                                     <div class="form-group">
@@ -161,12 +155,12 @@
                                             <path
                                                 d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
                                         </svg>
-                                        <input type="password" id="login-password" name="login-password"
-                                            placeholder="Ingresa Tu Contraseña" required>
+                                        <input class="Form-input" type="password" id="login-password"
+                                            name="login-password" placeholder="Ingresa Tu Contraseña" required>
                                         <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
 
                                     </div>
-                                    <button type="submit">Iniciar sesión</button>
+                                    <button class="btn-form" type="submit">Iniciar sesión</button>
                                     <p class="parrafo-panel">¿No tienes cuenta? <a href="#"
                                             id="register-link">Registrate
                                             aqui</a></p>
@@ -182,7 +176,7 @@
                                             <path
                                                 d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                                         </svg>
-                                        <input type="text" id="register-name" name="register-name"
+                                        <input class="Form-input" type="text" id="register-name" name="register-name"
                                             placeholder="Ingresa Tus Nombres" required>
                                     </div>
                                     <div class="form-group">
@@ -191,8 +185,8 @@
                                             <path
                                                 d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                                         </svg>
-                                        <input type="text" id="register-lastname" name="register-lastname"
-                                            placeholder="Ingresa Tus Apellidos" required>
+                                        <input class="Form-input" type="text" id="register-lastname"
+                                            name="register-lastname" placeholder="Ingresa Tus Apellidos" required>
                                     </div>
                                     <div class="form-group">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -200,7 +194,8 @@
                                             <path
                                                 d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5" />
                                         </svg>
-                                        <input type="date" id="register-birthday" name="register-birthday" required>
+                                        <input class="Form-input" type="date" id="register-birthday"
+                                            name="register-birthday" required>
                                     </div>
                                     <div class="form-group">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -208,9 +203,21 @@
                                             <path fill-rule="evenodd"
                                                 d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
                                         </svg>
-                                        <input type="tel" id="register-phone" name="register-phone"
+                                        <input class="Form-input" type="tel" id="register-phone" name="register-phone"
                                             placeholder="Ingresa Tu Numero" maxlength="12" required>
                                     </div>
+                                    <div class="form-group">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM8 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                                            <path
+                                                d="M8 1.75a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5zM7.75 8a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0z" />
+                                        </svg>
+                                        <input class="Form-input" type="text" id="register-rut" name="register-rut"
+                                            placeholder="Ingresa tu RUT" required>
+                                    </div>
+
                                     <div class="form-group">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
@@ -219,7 +226,7 @@
                                             <path
                                                 d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791" />
                                         </svg>
-                                        <input type="email" id="register-email" name="register-email"
+                                        <input class="Form-input" type="email" id="register-email" name="register-email"
                                             placeholder="Ingresa Tu Correo Personal" required>
                                     </div>
                                     <div class="form-group">
@@ -228,10 +235,10 @@
                                             <path
                                                 d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
                                         </svg>
-                                        <input type="password" id="register-password" name="register-password"
-                                            placeholder="Ingresa Una Contraseña" required>
+                                        <input class="Form-input" type="password" id="register-password"
+                                            name="register-password" placeholder="Ingresa Una Contraseña" required>
                                     </div>
-                                    <button type="submit">Registrarse</button>
+                                    <button class="btn-form" type="submit">Registrarse</button>
                                 </form>
                                 <p class="parrafo-panel">¿Ya tienes cuenta? <a href="#" id="login-link">Inicia aquí</a>
                                 </p>
@@ -314,30 +321,55 @@
                 <div class="col-lg-6">
                     <div class="container-Product content-box p-3">
                         <h4>Gestión de Productos</h4>
-                        <p>
-                            La funcionalidad de administrar productos en Purrfect es una herramienta esencial para los
-                            administradores de la tienda en línea. Desde esta sección, pueden agregar nuevos productos,
-                            actualizar la información de los productos existentes, eliminar productos que ya no estén
-                            disponibles y administrar el inventario para garantizar que siempre haya suficiente stock
-                            disponible. Los administradores también pueden establecer precios, agregar descripciones
-                            detalladas y fotos de alta calidad para cada producto para facilitar la navegación de los
-                            clientes en la tienda en línea.
+                        <p>La gestión de productos es una función esencial para los administradores de tiendas en línea.
+                            Permite agregar, actualizar y eliminar productos, así como administrar el inventario y
+                            establecer precios. Esta herramienta facilita mantener actualizado el catálogo de productos,
+                            garantizando que los clientes encuentren información precisa y productos disponibles en la
+                            tienda en todo momento
                         </p>
-                        <button type="button" class="btn-product mb-3" data-bs-toggle="modal"
-                            data-bs-target="#nuevoProductoModal">Agregar Nuevo Producto</button>
                         <div class="modal fade" id="nuevoProductoModal" tabindex="-1"
                             aria-labelledby="nuevoProductoModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 id="nuevoProductoModalLabel">nuevo producto</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                     </div>
                                     <div class="modal-body">
                                         <form id="formularioNuevoProducto">
-                                            <div class="mb-3">
-                                                <label for="selectCategoria" class="form-label">Categoría</label>
+                                            <h5 id="nuevoProductoModalLabel">Nuevo Producto <svg
+                                                    xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                    fill="currentColor" class="bi bi-layout-text-sidebar-reverse"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M12.5 3a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1zm0 3a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1zm.5 3.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5m-.5 2.5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1z" />
+                                                    <path
+                                                        d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zM4 1v14H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm1 0h9a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5z" />
+                                                </svg></h5>
+
+                                            <div class="form-group">
+                                                <input type="text" class="form-modal" id="inputId"
+                                                    placeholder="Ingresa ID, EJ: 1001" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-modal" id="inputImagen"
+                                                    placeholder="Ingresa URL de IMG" required>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="text" class="form-modal" id="inputNombre"
+                                                    placeholder="Ingresa Nombre Del Producto" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" class="form-modal" id="inputStock"
+                                                    placeholder="Ingresa el Stock Del Producto" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="number" class="form-modal" id="inputPrecio"
+                                                    placeholder="Ingresa el Precio Del Producto" required>
+                                            </div>
+                                            <div class="form-group">
                                                 <select class="form-select" id="selectCategoria" required>
+                                                    <option disabled selected>Seleccionar pagina</option>
                                                     <option value="Restaurante">Restaurante</option>
                                                     <option value="Almuerzos">Almuerzos</option>
                                                     <option value="Jugos">Jugos</option>
@@ -345,28 +377,7 @@
                                                     <option value="Postres">Postres</option>
                                                 </select>
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="inputId" class="form-label">ID</label>
-                                                <input type="text" class="form-modal" id="inputId" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="inputImagen" class="form-label">Imagen (URL)</label>
-                                                <input type="text" class="form-modal" id="inputImagen" required>
-                                            </div>
-
-                                            <div class="mb-3">
-                                                <label for="inputNombre" class="form-label">Nombre</label>
-                                                <input type="text" class="form-modal" id="inputNombre" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="inputStock" class="form-label">Stock</label>
-                                                <input type="number" class="form-modal" id="inputStock" required>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="inputPrecio" class="form-label">Precio</label>
-                                                <input type="number" class="form-modal" id="inputPrecio" required>
-                                            </div>
-                                            <button type="submit" class="btn btn-primary">Guardar</button>
+                                            <button type="submit" class="btn-modal">Guardar</button>
                                         </form>
                                     </div>
                                 </div>
@@ -375,17 +386,19 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">Id</th>
-                                    <th scope="col">Imagen</th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Categoría</th>
-                                    <th scope="col">Stock</th>
-                                    <th scope="col">Precio</th>
+                                    <th>Id</th>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Categoría</th>
+                                    <th>Stock</th>
+                                    <th>Precio</th>
                                 </tr>
                             </thead>
                             <tbody class="table-group-divider listaProductos">
                             </tbody>
                         </table>
+                        <button type="button" class="btn-product mb-3" data-bs-toggle="modal"
+                            data-bs-target="#nuevoProductoModal">Agregar Nuevo Producto</button>
                     </div>
                 </div>
 
@@ -441,28 +454,12 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-6">
                     <div class="container-user content-box p-3">
                         <h4>Gestión de Usuarios</h4>
-                        <form id="agregarUsuarioForm">
-                            <div class="mb-3">
-                                <label for="nombreUsuario" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="nombreUsuario" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="emailUsuario" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="emailUsuario" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="contraseniaUsuario" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" id="contraseniaUsuario"
-                                    value="contraseña123" disabled>
-                                <small id="contraseniaHelp" class="form-text text-muted">La contraseña será:
-                                    contraseña123</small>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Agregar Usuario</button>
-                        </form>
-                        <table class="table mt-3">
+                        <p>Administra fácilmente los usuarios con nuestras herramientas de gestión de usuarios.</p>
+                        <table class="table">
                             <thead>
                                 <tr>
                                     <th scope="col">ID</th>
@@ -474,11 +471,139 @@
                             <tbody id="listaUsuarios">
                             </tbody>
                         </table>
+
+                        <div class="modal fade" id="editarUsuarioModal" tabindex="-1"
+                            aria-labelledby="editarUsuarioModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <h5 class="modal-title" id="editarUsuarioModalLabel">Editar Usuario</h5>
+                                    <div class="modal-body">
+                                        <form id="formularioEditarUsuario">
+                                            <div class="form-group">
+                                                <label for="editName" class="form-label">Nombres</label>
+                                                <input type="text" class="form-control" id="editName" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="editLastname" class="form-label">Apellidos</label>
+                                                <input type="text" class="form-control" id="editLastname" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="editBirthday" class="form-label">Fecha De Nacimiento</label>
+                                                <input type="text" class="form-control" id="editBirthday" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="editNumero" class="form-label">Numero</label>
+                                                <input type="text" class="form-control" id="editNumero" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="editRut" class="form-label">Rut</label>
+                                                <input type="text" class="form-control" id="editRut" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="editCorreo" class="form-label">Correo</label>
+                                                <input type="text" class="form-control" id="editCorreo" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="editPassword" class="form-label">Contraseña</label>
+                                                <input type="text" class="form-control" id="editPassword" required>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn-cancel"
+                                            data-bs-dismiss="modal">Cancelar</button>
+                                        <button type="button" class="btn-save" id="guardarCambios">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container-form-user">
+                            <h2 class="form-title">Quieres agregar un Usuario</h2>
+                            <p class="form-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
+                                vero nihil tenetur,
+                                accusantium quasi id numquam sunt voluptate ad eum, labore atque recusandae! Quisquam
+                                suscipit accusamus, fugiat cumque adipisci doloremque!</p>
+                            <form id="agregarUsuarioForm">
+                                <div class="form-group-user">
+                                    <input class="Form-input-user" type="text" class="form-control" id="nombreUsuario"
+                                        placeholder="Ingresa el nombre" required>
+                                </div>
+                                <div class="form-group-user">
+                                    <input class="Form-input-user" type="text" class="form-control" id="rutUsuario"
+                                        placeholder="Ingresa el RUT" required>
+                                </div>
+                                <div class="form-group-user">
+                                    <input class="Form-input-user" type="email" class="form-control" id="emailUsuario"
+                                        placeholder="Ingresa el Email" required>
+                                </div>
+                                <div class="form-group-user">
+                                    <input class="Form-input-user" type="password" class="form-control"
+                                        id="contraseniaUsuario" value="contraseña123" disabled>
+                                </div>
+                                <button type="submit" class="btn-user">Agregar Usuario</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+
+    <footer class="footer text-black py-1">
+        <div class="container-footer">
+            <div class="contact" style="margin-top: 30px;">
+                <h5>Redes Sociales</h5>
+                <p><a href="https://www.gmail.com"
+                        style="color: #000; text-decoration: none; font-size: 15px; transition: color 0.3s; margin-left: 50px; margin-right: 10px;"
+                        onmouseover="this.style.color='#ebf909'" onmouseout="this.style.color='#000'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" fill="currentColor"
+                            class="bi bi-envelope" viewBox="0 0 16 16">
+                            <path
+                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                        </svg>VentasSpartSagan@gmail.com</a></p>
+                <p><a href="https://w.app/XP71fx"
+                        style="color: #000; text-decoration: none; font-size: 25px; transition: color 0.3s; margin-left: 50px; margin-right: 10px;"
+                        onmouseover="this.style.color='#ebf909'" onmouseout="this.style.color='#000'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                            style="color: #000; background-color: #25D366; border-radius: 15px;" fill="currentColor"
+                            class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path
+                                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                        </svg>WhatsApp</a></p>
+
+                <p><a href="https://github.com/Tufavo1/Web"
+                        style="color: #000; text-decoration: none; font-size: 15px; transition: color 0.3s; margin-left: 50px; margin-right: 10px;"
+                        onmouseover="this.style.color='#ebf909'" onmouseout="this.style.color='#000'">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-github" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                        </svg>Tufavo1</a>
+                </p>
+            </div>
+            <section class="formulario-vip">
+                <div class="form">
+                    <h5 style="text-align: center;">Suscríbete para recibir descuentos exclusivos</h5>
+                    <form class="container-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Correo Electrónico"
+                                aria-label="Correo Electrónico" aria-describedby="button-addon2"
+                                style="border: 4px solid #ebf909; text-align: center;">
+                            <button class="btn-footer" type="button" id="button-addon2">Suscribirse</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <div class="copyright">
+                <h6>&copy; 2024 Spartan Sagan. Todos los derechos reservados por tufavorito.</h6>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
