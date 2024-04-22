@@ -215,6 +215,17 @@
                                     </div>
                                     <div class="form-group">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM8 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                                            <path
+                                                d="M8 1.75a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5zM7.75 8a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0z" />
+                                        </svg>
+                                        <input class="Form-input" type="text" id="register-rut" name="register-rut"
+                                            placeholder="Ingresa tu RUT" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
                                             <path
                                                 d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671" />
@@ -342,9 +353,10 @@
                         Selecciona las secciones
                     </button>
                     <ul id="category-select" class="dropdown-filter dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li><a class="dropdown-item" href="#" disabled>Todos los Platillos</a>
+                        <li><a class="dropdown-item" href="../categorias/Restaurant.html">Todos los
+                                Platillos</a>
                         </li>
-                        <li><a class="dropdown-item active" href="#">Almuerzos</a></li>
+                        <li><a class="dropdown-item active" disabled select>Almuerzos</a></li>
                         <li><a class="dropdown-item" href="../categorias/postres.html">Postres</a></li>
                         <li><a class="dropdown-item" href="../categorias/jugos.html">Bebidas</a></li>
                         <li><a class="dropdown-item" href="../categorias/licores.html">Licores</a></li>
@@ -367,7 +379,7 @@
                         d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                 </svg>
             </h1>
-            <div class="container-card productos" id="allmain">
+            <div class="container-card productos" id="allAlmuerzos">
             </div>
         </div>
     </section>

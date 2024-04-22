@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpartSagan - Contacto</title>
 
+    <link rel="stylesheet" href="../CSS/contacto.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <link rel="stylesheet" href="../CSS/contacto.css">
-    <link rel="icon" href="../IMG/logo.png" type="image/svg+xml">
+    <link rel="icon" href="../IMG/logo.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.10.27/interact.min.js"></script>
 </head>
 
@@ -32,22 +31,24 @@
 
             <div class="btns collapse navbar-collapse" id="navbarNav">
                 <div class="container-sb d-flex align-items-center mx-auto">
-                    <button class="btn btn-outline-light">Ubicacion <svg xmlns="http://www.w3.org/2000/svg" width="20"
-                            height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                    <button id="getLocationBtn" class="btn btn-outline-light">Ubicación <svg
+                            xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
                             <path
                                 d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
                         </svg></button>
-                    <a class="btn" href="../index.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                    <a class="btn" href="../categorias/Restaurant.html"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="25" height="25" fill="currentColor" class="bi bi-arrow-left-circle-fill"
+                            viewBox="0 0 16 16">
                             <path
-                                d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
-                        </svg><span>Home</span>
+                                d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+                        </svg><span>Volver a Restaurant</span>
                     </a>
-                    <a class="btn" href="../HTML/Restaurant.html"><svg xmlns="http://www.w3.org/2000/svg" width="25"
-                            height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                        </svg><span>Restaurant</span>
+                    <a class="btn" href="../HTML/contacto.html"><svg xmlns="http://www.w3.org/2000/svg" width="25"
+                            height="25" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z" />
+                        </svg><span>Contacto</span>
                     </a>
                 </div>
                 <div class="btns d-flex justify-content-center">
@@ -76,10 +77,10 @@
                             </svg>
                             <span></span>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="HTML/Perfil.html"><svg xmlns="http://www.w3.org/2000/svg"
-                                        width="20" height="20" fill="currentColor" class="bi bi-person-fill"
-                                        viewBox="0 0 16 16">
+                        <ul class="dropdown-nav dropdown-menu">
+                            <li><a class="dropdown-item" href="#" id="ver-perfil"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-person-fill" viewBox="0 0 16 16">
                                         <path
                                             d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                                     </svg>Ver Perfil</a></li>
@@ -114,7 +115,7 @@
                                 <tbody id="carrito-body"></tbody>
                                 <tfoot>
                                     <tr>
-                                        <td colspan="5">Total:</td>
+                                        <td colspan="5">Subtotal:</td>
                                         <td id="total">$0</td>
                                     </tr>
                                 </tfoot>
@@ -128,13 +129,13 @@
                                                 d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
                                         </svg>Vaciar Carrito</button>
                                 </a>
-                                <a id="btn-comprar" href="#">
+                                <a id="btn-comprar" href="../HTML/carrito.html">
                                     <button class="btn-cart">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-basket2-fill" viewBox="0 0 16 16">
                                             <path
                                                 d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1" />
-                                        </svg>Comprar</button>
+                                        </svg>Revisar Carrito</button>
                                 </a>
                             </div>
                         </div>
@@ -215,6 +216,17 @@
                                     </div>
                                     <div class="form-group">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM8 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                                            <path
+                                                d="M8 1.75a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5zM7.75 8a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0z" />
+                                        </svg>
+                                        <input class="Form-input" type="text" id="register-rut" name="register-rut"
+                                            placeholder="Ingresa tu RUT" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
                                             <path
                                                 d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671" />
@@ -248,84 +260,131 @@
                 </div>
     </nav>
 
-    <div class="Contacto">
-        <div class="contacto-content">
-            <h1>Contacto</h1>
-            <form id="contact" class="container-contacto">
-                <div class="input-group mb-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000"
-                        class="bi bi-person-circle" viewBox="0 0 16 16" style="margin-right: 10px;">
-                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                        <path fill-rule="evenodd"
-                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
-                    </svg>
-                    <input type="text" class="form-control" placeholder="Ingresa tu Nombre" aria-label="Username"
-                        aria-describedby="basic-addon1">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="contacto-content">
+                    <h1 class="mb-4">Contacto</h1>
+                    <form id="contact" class="container-contacto">
+                        <div class="input-group mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000"
+                                class="bi bi-person-circle" viewBox="0 0 16 16" style="margin-right: 10px;">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                            </svg>
+                            <input type="text" class="form-control" placeholder="Ingresa tu Nombre"
+                                aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000"
+                                class="bi bi-envelope-at-fill" viewBox="0 0 16 16" style="margin-right: 10px;">
+                                <path
+                                    d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671" />
+                                <path
+                                    d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791" />
+                            </svg>
+                            <input type="text" class="form-control" placeholder="Ingresa tu Correo" aria-label="email"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000"
+                                class="bi bi-telephone-fill" viewBox="0 0 16 16" style="margin-right: 10px;">
+                                <path fill-rule="evenodd"
+                                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                            </svg>
+                            <input type="tel" class="form-control" placeholder="Ingresa tu Numero" aria-label="tel"
+                                aria-describedby="basic-addon1" maxlength="12">
+                        </div>
+                        <div class="input-group">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000"
+                                class="bi bi-card-text" viewBox="0 0 16 16" style="margin-right: 10px;">
+                                <path
+                                    d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
+                                <path
+                                    d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8m0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5" />
+                            </svg>
+                            <textarea class="form-control" aria-label="With textarea"
+                                placeholder="Escribe aqui"></textarea>
+                        </div>
+                        <button class="btn" style="margin-top: 24px;" type="submit">Enviar</button>
+                    </form>
                 </div>
-                <div class="input-group mb-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000"
-                        class="bi bi-envelope-at-fill" viewBox="0 0 16 16" style="margin-right: 10px;">
-                        <path
-                            d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671" />
-                        <path
-                            d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791" />
-                    </svg>
-                    <input type="text" class="form-control" placeholder="Ingresa tu Correo" aria-label="email"
-                        aria-describedby="basic-addon1">
-                </div>
-                <div class="input-group mb-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000"
-                        class="bi bi-telephone-fill" viewBox="0 0 16 16" style="margin-right: 10px;">
-                        <path fill-rule="evenodd"
-                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
-                    </svg>
-                    <input type="tel" class="form-control" placeholder="Ingresa tu Numero" aria-label="tel"
-                        aria-describedby="basic-addon1" maxlength="12">
-                </div>
-                <div class="input-group">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000" class="bi bi-card-text"
-                        viewBox="0 0 16 16" style="margin-right: 10px;">
-                        <path
-                            d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
-                        <path
-                            d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8m0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5" />
-                    </svg>
-                    <textarea class="form-control" aria-label="With textarea" placeholder="Escribe aqui"></textarea>
-                </div>
-                <button class="btn" style="margin-top: 24px;" type="submit">Enviar</button>
-            </form>
-        </div>
 
+                <div class="col-lg-6">
 
-        <article class="acerca-nosotros" id="acerca-nosotros">
-            <div class="container-acerca-nosotros">
-                <div class="text-container">
-                    <h2>Sobre Nosotros</h2>
-                    <p>En SpartSagan, nos enorgullece ser tu destino favorito para satisfacer tus antojos de comida
-                        rápida con una experiencia excepcional. Nos comprometemos a ofrecerte sabores irresistibles y
-                        opciones
-                        frescas en cada bocado. Nuestra visión es ser reconocidos como líderes en la industria de la
-                        comida
-                        rápida, no solo por nuestra deliciosa comida, sino también por nuestro servicio amigable y
-                        eficiente.
-                        Estamos dedicados a superar las expectativas de nuestros clientes cada día, creando momentos
-                        memorables a
-                        través de nuestros productos y nuestro compromiso con la calidad. En SpartSagan, estamos aquí
-                        para
-                        hacer que cada comida sea una experiencia rápida, conveniente y absolutamente deliciosa.</p>
+                    <article class="acerca-nosotros" id="acerca-nosotros">
+                        <div class="container-acerca-nosotros">
+                            <div class="text-container">
+                                <h2>Sobre Nosotros</h2>
+                                <p>En SpartSagan, nos enorgullece ser tu destino favorito para satisfacer tus
+                                    antojos de
+                                    comida
+                                    rápida con una experiencia excepcional. Nos comprometemos a ofrecerte sabores
+                                    irresistibles y
+                                    opciones
+                                    frescas en cada bocado. Nuestra visión es ser reconocidos como líderes en la
+                                    industria
+                                    de la
+                                    comida
+                                    rápida, no solo por nuestra deliciosa comida, sino también por nuestro servicio
+                                    amigable
+                                    y
+                                    eficiente.
+                                    Estamos dedicados a superar las expectativas de nuestros clientes cada día,
+                                    creando
+                                    momentos
+                                    memorables a
+                                    través de nuestros productos y nuestro compromiso con la calidad. En SpartSagan,
+                                    estamos
+                                    aquí
+                                    para
+                                    hacer que cada comida sea una experiencia rápida, conveniente y absolutamente
+                                    deliciosa.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </article>
+        </div>
     </div>
+
 
     <div class="container-clock">
         <div id="clock-container" class="d-flex align-items-center">
-            <button id="config-button" class="me-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-                    class="bi bi-gear-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
-                </svg> </button>
+            <div class="dropdown">
+                <button id="config-button" type="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                        class="bi bi-gear-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                    </svg>
+                </button>
+                <ul id="config-dropdown" class="dropdown-confi dropdown-menu dropdown-menu-end"
+                    aria-labelledby="config-button" style="display: none;">
+                    <li>
+                        <button id="color-change-btn" class="btn-menu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                class="bi bi-palette-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.433 10.07C14.133 10.585 16 11.15 16 8a8 8 0 1 0-8 8c1.996 0 1.826-1.504 1.649-3.08-.124-1.101-.252-2.237.351-2.92.465-.527 1.42-.237 2.433.07M8 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m4.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3M5 6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m.5 6.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                            </svg>
+                            <span>Cambio de paleta</span>
+                        </button>
+                    </li>
+                    <li><button class="btn-menu"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                fill="currentColor" class="bi bi-fonts" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.258 3h-8.51l-.083 2.46h.479c.26-1.544.758-1.783 2.693-1.845l.424-.013v7.827c0 .663-.144.82-1.3.923v.52h4.082v-.52c-1.162-.103-1.306-.26-1.306-.923V3.602l.431.013c1.934.062 2.434.301 2.693 1.846h.479z" />
+                            </svg><span>Tamannio de texto</span></button></li>
+                    <li><button class="btn-menu"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                fill="currentColor" class="bi bi-chat-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9 9 0 0 0 8 15" />
+                            </svg><span>Conversar con alguien</span></button></li>
+                </ul>
+            </div>
             <div id="clock" class="display-6"></div>
         </div>
     </div>
@@ -387,7 +446,10 @@
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="../JS/sitefunction.js"></script>
+<script src="../JS/script.js"></script>
 <script src="../JS/cart.js"></script>
-<script src="../../JS/Users.js"></script>
+<script src="../JS/Users.js"></script>
+<script src="../JS/loadData.js"></script>
+<script src="../JS/jquery-3.7.1.min.js"></script>
 
 </html>

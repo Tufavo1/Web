@@ -200,6 +200,14 @@ svg {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.active {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
 /* Estilos para el nav-item */
 .nav-item {
     list-style: none;

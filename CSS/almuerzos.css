@@ -518,67 +518,6 @@ button[type="submit"]:hover {
     }
 }
 
-/*Estilos para el section*/
-.filter-panel {
-    position: fixed;
-    top: 50%;
-    left: -30%;
-    width: 30%;
-    height: auto;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: left 0.3s;
-    z-index: 9999;
-}
-
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-.close-button {
-    color: #000 !important;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-
-#filter-form {
-    padding: 20px;
-    text-align: center;
-}
-
-#price-range {
-    color: #000;
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-    border: 1px solid #000;
-}
-
-label[for="price-range"] {
-    font-size: 15px;
-    text-align: center;
-}
-
-#price-value {
-    font-size: 15px;
-    display: block;
-    text-align: center;
-    margin-top: 5px;
-}
-
-.dropdown-filter {
-    background-color: #000 !important;
-    border-bottom: 3px solid #f4fd1d;
-    border-radius: 0 0 30px 30px;
-    -webkit-border-radius: 0 0 30px 30px;
-    -moz-border-radius: 0 0 30px 30px;
-    -ms-border-radius: 0 0 30px 30px;
-    -o-border-radius: 0 0 30px 30px;
-}
-
 /*Estilos para div de container card*/
 .container {
     border-bottom: 2px solid #f4fd1d;
@@ -806,7 +745,14 @@ label[for="price-range"] {
 
 /*Estilos para el modal de los botones ver ingredientes*/
 
-
+/*Estilos para el select activo*/
+.active {
+    border-radius: 10px !important;
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    -ms-border-radius: 10px !important;
+    -o-border-radius: 10px !important;
+}
 /*Estilos para el boton filtro*/
 .filter {
     border-top: 4px solid #f4fd1d;
@@ -858,7 +804,7 @@ label[for="price-range"] {
 }
 
 .form-control {
-    width: 30%;
+    width: 30% !important;
     margin: 0 auto;
 }
 
@@ -908,35 +854,65 @@ label[for="price-range"] {
     border: 2px solid #fff;
 }
 
-/*Estilos para los anuncios*/
-.anuncios {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    margin-bottom: -140px;
-}
-
-.container-anuncios {
-    border: 6px solid #f4fd1d;
-    width: 70%;
-    margin: 0 auto;
+/*Estilos para el section*/
+.filter-panel {
+    position: fixed;
+    top: 50%;
+    left: -30%;
+    width: 30%;
+    height: auto;
     background-color: #fff;
-    border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s;
+    z-index: 9999;
 }
 
-.img-anuncios {
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close-button {
+    color: #000 !important;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#filter-form {
+    padding: 20px;
+    text-align: center;
+}
+
+#price-range {
+    color: #000;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: inherit;
-    -webkit-border-radius: inherit;
-    -moz-border-radius: inherit;
-    -ms-border-radius: inherit;
-    -o-border-radius: inherit;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #000;
+}
+
+label[for="price-range"] {
+    font-size: 15px;
+    text-align: center;
+}
+
+#price-value {
+    font-size: 15px;
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.dropdown-filter {
+    background-color: #000 !important;
+    border-bottom: 3px solid #f4fd1d;
+    border-radius: 0 0 30px 30px;
+    -webkit-border-radius: 0 0 30px 30px;
+    -moz-border-radius: 0 0 30px 30px;
+    -ms-border-radius: 0 0 30px 30px;
+    -o-border-radius: 0 0 30px 30px;
 }
 
 /*Estilos para el footer*/

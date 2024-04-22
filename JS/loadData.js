@@ -161,7 +161,7 @@ $(document).ready(function () {
                         <div class="counter">
                             <button class="counter-btn decrement">-</button>
                             <input class="counter-value" type="number" id="contador" placeholder="1" value="1" min="1"
-                                max="10" class="input-quantity" readonly></input>
+                                max="${producto.stock}" class="input-quantity" readonly></input>
                             <button class="counter-btn increment">+</button>
                         </div>
                         <div class="button-container">
@@ -174,26 +174,31 @@ $(document).ready(function () {
             }
         });
 
-        const cards = document.querySelectorAll(".card");
+        $(".productos").on('click', '.counter-btn', function () {
+            const card = $(this).closest('.card');
+            const stock = parseInt(card.find('.Card-stock #Stock').text());
+            const counterValue = card.find('.counter-value');
+            const incrementBtn = card.find('.increment');
+            let count = parseInt(counterValue.val());
 
-        cards.forEach(card => {
-            const decrementBtn = card.querySelector(".decrement");
-            const incrementBtn = card.querySelector(".increment");
-            const counterValue = card.querySelector(".counter-value");
-
-            let count = 1;
-
-            decrementBtn.addEventListener('click', function () {
-                if (count > 0) {
+            if ($(this).hasClass('decrement')) {
+                if (count > 1) {
                     count--;
-                    counterValue.value = count;
+                    incrementBtn.prop('disabled', false);
                 }
-            });
+            } else if ($(this).hasClass('increment')) {
+                if (count < stock) {
+                    count++;
+                    if (count === stock) {
+                        incrementBtn.prop('disabled', true);
+                    }
+                } else {
+                    showAlert("No hay suficiente stock disponible.");
+                    return;
+                }
+            }
 
-            incrementBtn.addEventListener('click', function () {
-                count++;
-                counterValue.value = count;
-            });
+            counterValue.val(count);
         });
     } else {
         showAlert("Error al cargar los productos");
@@ -231,27 +236,54 @@ $(document).ready(function () {
             productosRestaurante.forEach((producto) => {
                 let html = `
                     <div class="card" data-id="${producto.id}">
-                        <img src="${producto.imagen}" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <h1 class="card-title">${producto.nombre}</h1>
-                            <p class="card-text">${producto.descripcion}</p>
-                            <p class="Card-categoria" style="display: none">Tipo de platillo: <span id="categoria">${producto.categoria}</span></p>
-                            <p class="Card-stock">Disponible: <span id="Stock">${producto.stock}</span></p>
-                            <p class="card-price">Precio: $<span id="Precio">${producto.precio}</span></p>
-                            <div class="counter">
-                                <button class="counter-btn decrement">-</button>
-                                <input class="counter-value" type="number" id="contador" placeholder="1" value="1" min="1" max="10" class="input-quantity" readonly></input>
-                                <button class="counter-btn increment">+</button>
-                            </div>
-                            <div class="button-container">
-                                <button class="btn-card">Ver Ingredientes</button>
-                                <button class="btn-card añadir-platillo">Añadir Platillo</button>
-                            </div>
+                    <img src="${producto.imagen}" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h1 class="card-title">${producto.nombre}</h1>
+                        <p class="card-text">${producto.descripcion}</p>
+                        <p class="Card-categoria" style="display: none">tipo de platillo: <span id="categoria">${producto.categoria}</span>
+                        <p class="Card-stock">Disponible: <span id="Stock">${producto.stock}</span></p>
+                        <p class="card-price">Precio: $<span id="Precio">${producto.precio}</span></p>
+                        <div class="counter">
+                            <button class="counter-btn decrement">-</button>
+                            <input class="counter-value" type="number" id="contador" placeholder="1" value="1" min="1"
+                                max="${producto.stock}" class="input-quantity" readonly></input>
+                            <button class="counter-btn increment">+</button>
                         </div>
-                    </div>`;
+                        <div class="button-container">
+                            <button class="btn-card">Ver Ingredientes</button>
+                            <button class="btn-card añadir-platillo">Añadir Platillo</button>
+                        </div>
+                    </div>
+                </div>`;
                 container.innerHTML += html;
             });
         }
+        $(".productos").on('click', '.counter-btn', function () {
+            const card = $(this).closest('.card');
+            const stock = parseInt(card.find('.Card-stock #Stock').text());
+            const counterValue = card.find('.counter-value');
+            const incrementBtn = card.find('.increment');
+            let count = parseInt(counterValue.val());
+
+            if ($(this).hasClass('decrement')) {
+                if (count > 1) {
+                    count--;
+                    incrementBtn.prop('disabled', false);
+                }
+            } else if ($(this).hasClass('increment')) {
+                if (count < stock) {
+                    count++;
+                    if (count === stock) {
+                        incrementBtn.prop('disabled', true);
+                    }
+                } else {
+                    showAlert("No hay suficiente stock disponible.");
+                    return;
+                }
+            }
+
+            counterValue.val(count);
+        });
     } else {
         showAlert("Error al cargar los productos");
     }

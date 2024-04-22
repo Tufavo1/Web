@@ -34,8 +34,8 @@
                             <path
                                 d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
                         </svg></button>
-                    <a class="btn" href="../HTML/Restaurant.html"><svg xmlns="http://www.w3.org/2000/svg" width="25"
-                            height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <a class="btn" href="../categorias/Restaurant.html"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
                                 d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                         </svg><span>Restaurant</span>
@@ -95,7 +95,7 @@
                                 <h1 class="titulo-cart">Productos</h1>
                                 <thead>
                                     <tr>
-                                        <th class="left-table">Imagen</th>
+                                        <th class="left-table text-center">Imagen</th>
                                         <th>Platillo</th>
                                         <th>Cantidad</th>
                                         <th>Precio</th>
@@ -105,8 +105,8 @@
                                 <tbody id="carrito-body"></tbody>
                                 <tfoot>
                                     <tr>
-                                        <td colspan="5">Subtotal:</td>
-                                        <td id="total">$0</td>
+                                        <td class="subtotal text-center" colspan="3">Subtotal:</td>
+                                        <td class="subtotal text-start" id="total">$0</td>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -119,13 +119,13 @@
                                                 d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
                                         </svg>Vaciar Carrito</button>
                                 </a>
-                                <a id="btn-comprar" href="#">
+                                <a id="btn-comprar" href="../HTML/carrito.html">
                                     <button class="btn-cart">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-basket2-fill" viewBox="0 0 16 16">
                                             <path
                                                 d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1" />
-                                        </svg>Comprar</button>
+                                        </svg>Ver Carrito</button>
                                 </a>
                             </div>
                         </div>
@@ -203,6 +203,17 @@
                                         </svg>
                                         <input type="tel" id="register-phone" name="register-phone"
                                             placeholder="Ingresa Tu Numero" maxlength="12" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM8 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                                            <path
+                                                d="M8 1.75a4.25 4.25 0 1 0 0 8.5 4.25 4.25 0 0 0 0-8.5zM7.75 8a3.25 3.25 0 1 1 6.5 0 3.25 3.25 0 0 1-6.5 0z" />
+                                        </svg>
+                                        <input class="Form-input" type="text" id="register-rut" name="register-rut"
+                                            placeholder="Ingresa tu RUT" required>
                                     </div>
                                     <div class="form-group">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -411,5 +422,7 @@
 <script src="../JS/sitefunction.js"></script>
 <script src="../JS/admin.js"></script>
 <script src="../JS/adminfunction.js"></script>
+<script src="../JS/jquery-3.7.1.min.js"></script>
+<script src="../JS/jquery.validate.js"></script>
 
 </html>
