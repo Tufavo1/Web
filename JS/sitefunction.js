@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function () {
     logoutLink.addEventListener('click', function () {
         localStorage.removeItem('LoggedInUser');
         window.location.href = '../index.html';
-    });
+    })
 
     document.getElementById("user-cart").addEventListener("click", function () {
         let userCart = document.getElementById("user-cart");

@@ -476,7 +476,14 @@ button[type="submit"]:hover {
 }
 
 /*Estilos para el section contacto*/
+.contact-container {
+    display: flex;
+    margin-top: 350px;
+}
 
+.contacto {
+    margin: 0 auto;
+}
 
 /*Estilos para el footer*/
 .footer {

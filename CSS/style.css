@@ -378,8 +378,16 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="tel"],
 input[type="date"] {
+    margin: 0 auto;
+    width: 250px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    text-align: center;
+    padding: 8px;
+}
+
+.input-phone {
     margin: 0 auto;
     width: 250px;
     border: 1px solid #000;
@@ -567,7 +575,8 @@ img {
 .card {
     position: relative;
     width: 320px;
-    height: auto;
+    margin: 10px;
+    height: 400px !important;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
