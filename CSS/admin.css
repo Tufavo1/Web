@@ -217,6 +217,7 @@ span {
 
 #carrito-body .btn-eliminar-producto:hover {
     background-color: #f4fd1d;
+    color: #000;
 }
 
 #carrito-body img {
@@ -508,6 +509,10 @@ span {
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
+}
+
+.buscador {
+    padding: 20px;
 }
 
 .container-Product :where(h4, p) {

@@ -165,8 +165,8 @@ $(document).ready(function () {
                             <button class="counter-btn increment">+</button>
                         </div>
                         <div class="button-container">
-                            <button class="btn-card">Ver Ingredientes</button>
-                            <button class="btn-card añadir-platillo">Añadir Platillo</button>
+                        <button class="btn-card" id="abrirResennias">Ver Resennias</button>
+                        <button class="btn-card añadir-platillo">Añadir Platillo</button>
                         </div>
                     </div>
                 </div>`;
@@ -250,7 +250,7 @@ $(document).ready(function () {
                             <button class="counter-btn increment">+</button>
                         </div>
                         <div class="button-container">
-                            <button class="btn-card">Ver Ingredientes</button>
+                            <button class="btn-card" id="abrirResennias">Ver Resennias</button>
                             <button class="btn-card añadir-platillo">Añadir Platillo</button>
                         </div>
                     </div>

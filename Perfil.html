@@ -4,20 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido - Admin</title>
-    <link rel="stylesheet" href="../CSS/admin.css">
+    <title>SpartSagan - Perfil</title>
+    <link rel="stylesheet" href="CSS/profile.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="icon" href="../IMG/logo.png">
+    <link rel="icon" href="IMG/logo.png" type="image/svg+xml">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.10.27/interact.min.js"></script>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class=" container-fluid">
-            <a class="navbar-brand" href="#"><img src="../IMG/logo-sin-fondo.png" alt="Spart Sagan"></a>
+            <a class="navbar-brand" href="#"><img src="IMG/logo-sin-fondo.png" alt="Spart Sagan"></a>
             <button class="btn navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
@@ -35,13 +34,13 @@
                             <path
                                 d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
                         </svg></button>
-                    <a class="btn" href="../categorias/Restaurant.html"><svg xmlns="http://www.w3.org/2000/svg"
-                            width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <a class="btn" href="categorias/Restaurant.html"><svg xmlns="http://www.w3.org/2000/svg" width="25"
+                            height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
                                 d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
                         </svg><span>Restaurant</span>
                     </a>
-                    <a class="btn" href="../HTML/contacto.html"><svg xmlns="http://www.w3.org/2000/svg" width="25"
+                    <a class="btn" href="HTML/contacto.html"><svg xmlns="http://www.w3.org/2000/svg" width="25"
                             height="25" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
                             <path
                                 d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z" />
@@ -146,7 +145,7 @@
                                             <path
                                                 d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
                                         </svg>
-                                        <input class="Form-input" type="email" id="login-email" name="login-email"
+                                        <input type="email" id="login-email" name="login-email"
                                             placeholder="Ingresa Tu Correo" required>
                                     </div>
                                     <div class="form-group">
@@ -155,12 +154,12 @@
                                             <path
                                                 d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
                                         </svg>
-                                        <input class="Form-input" type="password" id="login-password"
-                                            name="login-password" placeholder="Ingresa Tu Contraseña" required>
+                                        <input type="password" id="login-password" name="login-password"
+                                            placeholder="Ingresa Tu Contraseña" required>
                                         <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
 
                                     </div>
-                                    <button class="btn-form" type="submit">Iniciar sesión</button>
+                                    <button type="submit">Iniciar sesión</button>
                                     <p class="parrafo-panel">¿No tienes cuenta? <a href="#"
                                             id="register-link">Registrate
                                             aqui</a></p>
@@ -176,7 +175,7 @@
                                             <path
                                                 d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                                         </svg>
-                                        <input class="Form-input" type="text" id="register-name" name="register-name"
+                                        <input type="text" id="register-name" name="register-name"
                                             placeholder="Ingresa Tus Nombres" required>
                                     </div>
                                     <div class="form-group">
@@ -185,8 +184,8 @@
                                             <path
                                                 d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                                         </svg>
-                                        <input class="Form-input" type="text" id="register-lastname"
-                                            name="register-lastname" placeholder="Ingresa Tus Apellidos" required>
+                                        <input type="text" id="register-lastname" name="register-lastname"
+                                            placeholder="Ingresa Tus Apellidos" required>
                                     </div>
                                     <div class="form-group">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -194,8 +193,7 @@
                                             <path
                                                 d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5" />
                                         </svg>
-                                        <input class="Form-input" type="date" id="register-birthday"
-                                            name="register-birthday" required>
+                                        <input type="date" id="register-birthday" name="register-birthday" required>
                                     </div>
                                     <div class="form-group">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -203,7 +201,7 @@
                                             <path fill-rule="evenodd"
                                                 d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
                                         </svg>
-                                        <input class="Form-input" type="tel" id="register-phone" name="register-phone"
+                                        <input type="tel" id="register-phone" name="register-phone"
                                             placeholder="Ingresa Tu Numero" maxlength="12" required>
                                     </div>
                                     <div class="form-group">
@@ -217,7 +215,6 @@
                                         <input class="Form-input" type="text" id="register-rut" name="register-rut"
                                             placeholder="Ingresa tu RUT" required>
                                     </div>
-
                                     <div class="form-group">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                             fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
@@ -226,7 +223,7 @@
                                             <path
                                                 d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791" />
                                         </svg>
-                                        <input class="Form-input" type="email" id="register-email" name="register-email"
+                                        <input type="email" id="register-email" name="register-email"
                                             placeholder="Ingresa Tu Correo Personal" required>
                                     </div>
                                     <div class="form-group">
@@ -235,10 +232,10 @@
                                             <path
                                                 d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
                                         </svg>
-                                        <input class="Form-input" type="password" id="register-password"
-                                            name="register-password" placeholder="Ingresa Una Contraseña" required>
+                                        <input type="password" id="register-password" name="register-password"
+                                            placeholder="Ingresa Una Contraseña" required>
                                     </div>
-                                    <button class="btn-form" type="submit">Registrarse</button>
+                                    <button type="submit">Registrarse</button>
                                 </form>
                                 <p class="parrafo-panel">¿Ya tienes cuenta? <a href="#" id="login-link">Inicia aquí</a>
                                 </p>
@@ -252,6 +249,79 @@
                     </div>
                 </div>
     </nav>
+
+
+    <main class="main-contain">
+        <div class="container-profile">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card-profile mt-5">
+                        <div class="card-body-profile text-center">
+                            <div class="rounded-circle img-fluid mb-4" alt="Avatar"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor"
+                                    class="bi bi-person-badge-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6m5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1z" />
+                                </svg></div>
+                            <form id="profile-form">
+                                <div class="mb-4" id="user-info">
+                                </div>
+                                <button type="button" id="edit-profile" class="btn-main">Editar Perfil</button>
+                                <button type="submit" id="save-profile" class="btn-main"
+                                    style="display: none;">Guardar</button>
+                                <button type="button" id="cancel-edit" class="btn-main"
+                                    style="display: none;">Cancelar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-cards">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-sm-12">
+                    <div class="card-history mt-5">
+                        <div class="card-body text-center">
+                            <img src="IMG/icon/historial-de-compras.png" class="img-card rounded-circle img-fluid mb-4"
+                                alt="Avatar">
+                            <h4>Historial de Compras</h4>
+                            <div class="mb-2">
+                                <table class="table bg-dark">
+                                    <thead>
+                                        <th scope="row">N° transaccion</th>
+                                        <td colspan="2">Nombre del producto</td>
+                                        <td>Cantidad</td>
+                                        <td>Precio</td>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="card-buy mt-5">
+                        <div class="card-body text-center">
+                            <img src="IMG/icon/tarjeta-vip.png" class="img-card rounded-circle img-fluid mb-4"
+                                alt="Avatar">
+                            <h4>Suscripcion</h4>
+                            <div class="mb-5">
+                                <h5> Descubre una nueva forma de disfrutar con nuestra suscripción exclusiva. Cada mes,
+                                    recibirás una selección cuidadosamente curada de productos sorpresa, desde delicias
+                                    gourmet hasta productos artesanales únicos. Explora nuevos sabores, productos de
+                                    temporada y regalos especiales entregados directamente en tu puerta. Únete a nuestra
+                                    comunidad de suscriptores y déjate sorprender con cada entrega.
+                                </h5>
+                            </div>
+                            <button class="btn-suscripcion">Suscribirse</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <div class="container-clock">
         <div id="clock-container" class="d-flex align-items-center">
@@ -290,269 +360,6 @@
             <div id="clock" class="display-6"></div>
         </div>
     </div>
-    <main class="main-contain">
-        <div class="container-profile">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card-profile mt-5">
-                        <div class="card-body-profile text-center">
-                            <div class="rounded-circle img-fluid mb-4" alt="Avatar"><svg
-                                    xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor"
-                                    class="bi bi-person-badge-fill" viewBox="0 0 16 16">
-                                    <path
-                                        d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6m5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1z" />
-                                </svg></div>
-                            <form id="profile-form">
-                                <div class="mb-4" id="user-info">
-                                </div>
-                                <button type="button" id="edit-profile" class="btn-main">Editar Perfil</button>
-                                <button type="submit" id="save-profile" class="btn-main"
-                                    style="display: none;">Guardar</button>
-                                <button type="button" id="cancel-edit" class="btn-main"
-                                    style="display: none;">Cancelar</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid overflow-hidden pb-5" style="padding-top: 10rem">
-            <div class="row gx-5">
-                <div class="col-lg-6">
-                    <div class="container-Product content-box p-3">
-                        <h4>Gestión de Productos</h4>
-                        <p>La gestión de productos es una función esencial para los administradores de tiendas en línea.
-                            Permite agregar, actualizar y eliminar productos, así como administrar el inventario y
-                            establecer precios. Esta herramienta facilita mantener actualizado el catálogo de productos,
-                            garantizando que los clientes encuentren información precisa y productos disponibles en la
-                            tienda en todo momento
-                        </p>
-                        <div class="modal fade" id="nuevoProductoModal" tabindex="-1"
-                            aria-labelledby="nuevoProductoModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form id="formularioNuevoProducto">
-                                            <h5 id="nuevoProductoModalLabel">Nuevo Producto <svg
-                                                    xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                                                    fill="currentColor" class="bi bi-layout-text-sidebar-reverse"
-                                                    viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M12.5 3a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1zm0 3a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1zm.5 3.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5m-.5 2.5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1z" />
-                                                    <path
-                                                        d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zM4 1v14H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm1 0h9a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5z" />
-                                                </svg></h5>
-
-                                            <div class="form-group">
-                                                <input type="text" class="form-modal" id="inputId"
-                                                    placeholder="Ingresa ID, EJ: 1001" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" class="form-modal" id="inputImagen"
-                                                    placeholder="Ingresa URL de IMG" required>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <input type="text" class="form-modal" id="inputNombre"
-                                                    placeholder="Ingresa Nombre Del Producto" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="number" class="form-modal" id="inputStock"
-                                                    placeholder="Ingresa el Stock Del Producto" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="number" class="form-modal" id="inputPrecio"
-                                                    placeholder="Ingresa el Precio Del Producto" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <select class="form-select" id="selectCategoria" required>
-                                                    <option disabled selected>Seleccionar pagina</option>
-                                                    <option value="Restaurante">Restaurante</option>
-                                                    <option value="Almuerzos">Almuerzos</option>
-                                                    <option value="Jugos">Jugos</option>
-                                                    <option value="Licores">Licores</option>
-                                                    <option value="Postres">Postres</option>
-                                                </select>
-                                            </div>
-                                            <button type="submit" class="btn-modal">Guardar</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Id</th>
-                                    <th>Imagen</th>
-                                    <th>Nombre</th>
-                                    <th>Categoría</th>
-                                    <th>Stock</th>
-                                    <th>Precio</th>
-                                </tr>
-                            </thead>
-                            <tbody class="table-group-divider listaProductos">
-                            </tbody>
-                        </table>
-                        <button type="button" class="btn-product mb-3" data-bs-toggle="modal"
-                            data-bs-target="#nuevoProductoModal">Agregar Nuevo Producto</button>
-                    </div>
-                </div>
-
-                <div class="modal fade" id="productoModal" tabindex="-1" aria-labelledby="productoModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="productoModalLabel">Detalles del Producto</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form id="formularioEditarProducto">
-                                    <div class="mb-3">
-                                        <label for="id-producto" class="form-label">ID</label>
-                                        <input type="text" class="form-control" id="id-producto" readonly>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="inputImagen" class="form-label">Imagen (URL)</label>
-                                        <input type="text" class="form-control" id="inputImagen" accept="image/*">
-                                    </div>
-
-
-                                    <div class="mb-3">
-                                        <label for="nombre-producto" class="form-label">Nombre</label>
-                                        <input type="text" class="form-control" id="nombre-producto">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="selectCategoria" class="form-label">Categoría</label>
-                                        <select class="form-select" id="selectCategoria">
-                                            <option value="Restaurante">Restaurante</option>
-                                            <option value="Almuerzos">Almuerzos</option>
-                                            <option value="Jugos">Jugos</option>
-                                            <option value="Licores">Licores</option>
-                                            <option value="Postres">Postres</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="inputStock" class="form-label">Stock</label>
-                                        <input type="number" class="form-control" id="inputStock">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="inputPrecio" class="form-label">Precio</label>
-                                        <input type="number" class="form-control" id="inputPrecio">
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="button" class="btn btn-primary" id="btn-guardar">Guardar Cambios</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="container-user content-box p-3">
-                        <h4>Gestión de Usuarios</h4>
-                        <p>Administra fácilmente los usuarios con nuestras herramientas de gestión de usuarios.</p>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Acciones</th>
-                                </tr>
-                            </thead>
-                            <tbody id="listaUsuarios">
-                            </tbody>
-                        </table>
-
-                        <div class="modal fade" id="editarUsuarioModal" tabindex="-1"
-                            aria-labelledby="editarUsuarioModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <h5 class="modal-title" id="editarUsuarioModalLabel">Editar Usuario</h5>
-                                    <div class="modal-body">
-                                        <form id="formularioEditarUsuario">
-                                            <div class="form-group">
-                                                <label for="editName" class="form-label">Nombres</label>
-                                                <input type="text" class="form-control" id="editName" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="editLastname" class="form-label">Apellidos</label>
-                                                <input type="text" class="form-control" id="editLastname" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="editBirthday" class="form-label">Fecha De Nacimiento</label>
-                                                <input type="text" class="form-control" id="editBirthday" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="editNumero" class="form-label">Numero</label>
-                                                <input type="text" class="form-control" id="editNumero" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="editRut" class="form-label">Rut</label>
-                                                <input type="text" class="form-control" id="editRut" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="editCorreo" class="form-label">Correo</label>
-                                                <input type="text" class="form-control" id="editCorreo" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="editPassword" class="form-label">Contraseña</label>
-                                                <input type="text" class="form-control" id="editPassword" required>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn-cancel"
-                                            data-bs-dismiss="modal">Cancelar</button>
-                                        <button type="button" class="btn-save" id="guardarCambios">Guardar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="container-form-user">
-                            <h2 class="form-title">Quieres agregar un Usuario</h2>
-                            <p class="form-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
-                                vero nihil tenetur,
-                                accusantium quasi id numquam sunt voluptate ad eum, labore atque recusandae! Quisquam
-                                suscipit accusamus, fugiat cumque adipisci doloremque!</p>
-                            <form id="agregarUsuarioForm">
-                                <div class="form-group-user">
-                                    <input class="Form-input-user" type="text" class="form-control" id="nombreUsuario"
-                                        placeholder="Ingresa el nombre" required>
-                                </div>
-                                <div class="form-group-user">
-                                    <input class="Form-input-user" type="text" class="form-control" id="rutUsuario"
-                                        placeholder="Ingresa el RUT" required>
-                                </div>
-                                <div class="form-group-user">
-                                    <input class="Form-input-user" type="email" class="form-control" id="emailUsuario"
-                                        placeholder="Ingresa el Email" required>
-                                </div>
-                                <div class="form-group-user">
-                                    <input class="Form-input-user" type="password" class="form-control"
-                                        id="contraseniaUsuario" value="contraseña123" disabled>
-                                </div>
-                                <button type="submit" class="btn-user">Agregar Usuario</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
 
     <footer class="footer text-black py-1">
         <div class="container-footer">
@@ -606,18 +413,15 @@
     </footer>
 
 </body>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-<script src="../JS/jquery.min.js"></script>
-<script src="../JS/cart.js"></script>
-<script src="../JS/sitefunction.js"></script>
-<script src="../JS/admin.js"></script>
-<script src="../JS/loadData.js"></script>
-<script src="../JS/jquery-3.7.1.min.js"></script>
-<script src="../JS/Users.js"></script>
-<script src="../JS/adminfunction.js"></script>
-<script src="../JS/jquery.validate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="JS/Users.js"></script>
+<script src="JS/cart.js"></script>
+<script src="JS/UsersFunction.js"></script>
+<script src="JS/sitefunction.js"></script>
+<script src="JS/jquery-3.7.1.min.js"></script>
+<script src="JS/jquery.validate.js"></script>
 
 </html>

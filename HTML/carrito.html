@@ -201,7 +201,7 @@
     </nav>
 
     <main class="container-cart">
-        <section class="cart-content">
+        <div class="cart-content">
             <table id="lista-carrito">
                 <h1 class="titulo-cart">Productos</h1>
                 <thead>
@@ -215,8 +215,8 @@
                 </thead>
                 <tbody id="carrito-body"></tbody>
             </table>
-        </section>
-        <section class="checkout">
+        </div>
+        <div class="checkout">
             <div class="subtotal">
                 <p>Subtotal: <span id="subtotal">$0</span></p>
             </div>
@@ -226,7 +226,7 @@
             <div class="discount">
                 <input class="input-custom" type="text" id="discount-code" name="discount-code" maxlength="12"
                     placeholder="Ingresa Codigo De Descuento">
-                <button class="btn-discount" id="apply-discount">Aplicar Descuento</button>
+                <button class="btn-discount" id="apply-discount">Aplicar</button>
             </div>
             <div class="btn-container">
                 <a id="vaciar-carrito">
@@ -237,7 +237,7 @@
                                 d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
                         </svg>Vaciar Carrito</button>
                 </a>
-                <a id="btn-comprar" href="HTML/carrito.html">
+                <a id="btn-comprar" href="#">
                     <button class="btn-cart">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             viewBox="0 0 16 16">
@@ -246,7 +246,7 @@
                         </svg>Comprar</button>
                 </a>
             </div>
-        </section>
+        </div>
     </main>
 
     <div class="container-clock">

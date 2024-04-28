@@ -535,20 +535,20 @@ button[type="submit"]:hover {
     position: relative;
     width: 400px;
     height: auto;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    -webkit-transition: transform 0.3s, box-shadow 0.3s;
-    -moz-transition: transform 0.3s, box-shadow 0.3s;
-    -ms-transition: transform 0.3s, box-shadow 0.3s;
-    -o-transition: transform 0.3s, box-shadow 0.3s;
-    border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
-    margin-right: 30px;
-    margin-top: 30px;
+    overflow: hidden !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s, box-shadow 0.3s !important;
+    -webkit-transition: transform 0.3s, box-shadow 0.3s !important;
+    -moz-transition: transform 0.3s, box-shadow 0.3s !important;
+    -ms-transition: transform 0.3s, box-shadow 0.3s !important;
+    -o-transition: transform 0.3s, box-shadow 0.3s !important;
+    border-radius: 25px !important;
+    -webkit-border-radius: 25px !important;
+    -moz-border-radius: 25px !important;
+    -ms-border-radius: 25px !important;
+    -o-border-radius: 25px !important;
+    margin-right: 30px !important;
+    margin-top: 30px !important;
 }
 
 .card:hover {
@@ -1002,7 +1002,6 @@ label[for="price-range"] {
 
 /*Media Queries para responsividad personalizada para pantallas pequennias*/
 @media screen and (max-width: 768px) {
-
     /*Estilos para el panel de usuario y carrito*/
     .user-panel {
         width: 438px;
@@ -1060,31 +1059,14 @@ label[for="price-range"] {
         margin: 0 auto;
     }
 
-    /*Estilos para el carousel*/
-    .container-motion {
-        display: flex;
-        justify-content: center;
+    /*Estilos para el background*/
+    .background-image {
+        height: 800px;
     }
 
-    .carousel-wrapper {
-        width: 100%;
-        max-width: 1500px;
-        aspect-ratio: 16/9;
-        overflow: hidden;
-        margin: 0 auto;
-        position: relative;
-    }
-
-    .slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 25px;
-        -webkit-border-radius: 25px;
-        -moz-border-radius: 25px;
-        -ms-border-radius: 25px;
-        -o-border-radius: 25px;
-        border: none;
+    .background-image  :where(h1) {
+        font-size: 90px;
+        font-weight: 900;
     }
 
     /*Estilos para el filtro*/
@@ -1109,8 +1091,8 @@ label[for="price-range"] {
     }
 
     .form-control {
-        width: 85%;
-        margin: 0 auto;
+        width: 85% !important;
+        margin: 0 auto !important;
     }
 
     #search-results {
@@ -1162,6 +1144,53 @@ label[for="price-range"] {
         margin-left: 150px;
     }
 
+    /*Estilos para el filter panel*/
+    .filter-panel {
+        left: -100%;
+        right: 100%;
+        width: 80%;
+        padding: 15px;
+        border-radius: 25px !important;
+        -webkit-border-radius: 25px !important;
+        -moz-border-radius: 25px !important;
+        -ms-border-radius: 25px !important;
+        -o-border-radius: 25px !important;
+    }
+
+    .filter-panel :where(h4) {
+        font-size: 20px;
+        font-weight: 600;
+        color: #000;
+    }
+
+    .close-button {
+        background-color: #000;
+        color: #fff !important;
+        border: none;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+}
+
+    .close-button:hover {
+        background-color: #f4fd1d;
+        color: #000 !important;
+    }
+
+    .option-control {
+        background-color: #000;
+        color: #fff !important;
+        text-align: center;
+        width: 50% !important;
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+    }
+
     /*Estilos del section menu*/
     .menu-title {
         width: 380px;
@@ -1204,34 +1233,8 @@ label[for="price-range"] {
         border: 4px solid #000;
         color: #000;
     }
-
-    /*Estilos para los anuncios*/
-    .anuncios {
-        margin-bottom: 20px;
-    }
-
-    .container-anuncios {
-        width: 90%;
-        margin: 0 auto;
-        overflow: hidden;
-    }
-
+    
     /*Estilos para el footer*/
-    .footer .container {
-        text-align: center;
-    }
-
-    .footer .container .row {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer .container .col-md-6 {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
     .form :where(h5) {
         margin-bottom: -20px;
         font-weight: 600;
