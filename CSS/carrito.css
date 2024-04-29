@@ -659,6 +659,14 @@ button[type="submit"]:hover {
     color: #000;
 }
 
+/*Estilos para el despacho a domicilio*/
+.delivery-options {
+    width: 100%;
+    border-top: 1px solid #000;
+    margin-top: 20px;
+    padding: 10px;
+}
+
 /*Estilos para el checkout*/
 .checkout {
     background-color: #000;
