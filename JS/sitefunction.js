@@ -1,14 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('.search');
-    const input = document.getElementById('search-input');
-    const searchResults = document.getElementById('search-results');
-
     const filterButton = document.getElementById('filter-button');
     const closeFilterButton = document.getElementById('close-filter');
     const filterPanel = document.getElementById('filter-panel');
-    const formFilter = document.getElementById('filter-form');
-    const priceRange = document.getElementById('price-range');
-    const cards = document.querySelectorAll('.card');
+    const slides = document.querySelectorAll('.slide');
+    const loggedInUser = JSON.parse(localStorage.getItem('LoggedInUser'));
+    const logoutButton = document.getElementById("Perfil");
+    const perfilButton = document.getElementById("ver-perfil");
 
     let isFilterApplied = false;
     let isFilterPanelOpen = false;
@@ -19,15 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (closeFilterButton) {
         closeFilterButton.addEventListener('click', hideFilterPanel);
-    }
-
-    if (formFilter) {
-        formFilter.addEventListener('submit', function (event) {
-            event.preventDefault();
-            applyFilter();
-            hideFilterPanel();
-            isFilterApplied = true;
-        });
     }
 
     function toggleFilterPanel() {
@@ -44,75 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
         isFilterPanelOpen = false;
     }
 
-    function applyFilter() {
-        const selectedPriceRange = priceRange.value;
-        const [minPrice, maxPrice] = selectedPriceRange.split('-').map(Number);
-
-        cards.forEach(function (card) {
-            const cardPrice = parseInt(card.querySelector('.card-price span').textContent);
-            if (cardPrice >= minPrice && cardPrice <= maxPrice) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    }
-
-    if (form && input && searchResults) {
-
-
-        form.addEventListener('input', function () {
-            const searchTerm = input.value.toLowerCase();
-
-            const cards = document.querySelectorAll('.card');
-
-            const results = [];
-            const suggestions = [];
-
-            cards.forEach(function (card) {
-                const title = card.querySelector('.card-title').textContent.toLowerCase();
-                const text = card.querySelector('.card-text').textContent.toLowerCase();
-
-                if (title.includes(searchTerm) || text.includes(searchTerm)) {
-                    const imgSrc = card.querySelector('.card-img-top').src;
-                    const result = document.createElement('div');
-                    result.classList.add('search-result');
-
-                    const img = document.createElement('img');
-                    img.classList.add('search-result-img');
-                    img.src = imgSrc;
-                    result.appendChild(img);
-
-                    const titleElement = document.createElement('h3');
-                    titleElement.textContent = card.querySelector('.card-title').textContent;
-                    result.appendChild(titleElement);
-
-                    results.push(result);
-                } else if (title.includes(searchTerm.split(' ')[0]) || text.includes(searchTerm.split(' ')[0])) {
-                    suggestions.push(title);
-                }
-            });
-
-            searchResults.innerHTML = '';
-
-            if (results.length > 0) {
-                results.forEach(function (result) {
-                    searchResults.appendChild(result);
-                });
-                searchResults.style.display = 'block';
-            } else {
-                searchResults.style.display = 'none';
-            }
-
-            if (suggestions.length > 0) {
-                console.log('¿Quizás quisiste buscar: ' + suggestions.join(', ') + '?');
-            }
-        });
-
-        input.addEventListener('blur', function () {
-            searchResults.style.display = 'none';
-        })
-    }
 
     var btnComprar = document.getElementById("btn-comprar");
     if (btnComprar) {
@@ -124,12 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-
-    document.getElementById("color-change-btn").addEventListener("click", function () {
-        document.querySelector(".slide-content").style.backgroundColor = "white";
-        document.querySelector(".slide.active .btn-warning").style.backgroundColor = "orange";
-        document.querySelector(".slide.active .btn-warning").style.color = "black";
-    });
 
     var configDropdown = document.getElementById("config-dropdown");
     var configButton = document.getElementById("config-button");
@@ -143,8 +56,37 @@ document.addEventListener('DOMContentLoaded', function () {
         configDropdown.style.display = 'none';
     });
 
-    const slides = document.querySelectorAll('.slide');
-    const loggedInUser = JSON.parse(localStorage.getItem('LoggedInUser'));
+
+    if (perfilButton) {
+        const baseLocation = window.location.origin;
+        perfilButton.addEventListener("click", function () {
+            if (loggedInUser && loggedInUser.email === "jose@gmail.com") {
+                window.location.href = baseLocation + '/admin.html';
+            } else {
+                window.location.href = baseLocation + '/perfil.html';
+            }
+        });
+    }
+
+    if (logoutButton) {
+        logoutButton.addEventListener("click", function () {
+            const modal = document.getElementById("myModal");
+            modal.style.display = "block";
+    
+            const confirmButton = document.getElementById("confirmButton");
+            const cancelButton = document.getElementById("cancelButton");
+    
+            confirmButton.onclick = function() {
+                localStorage.removeItem('LoggedInUser');
+                window.location.reload();
+                modal.style.display = "none";
+            }
+    
+            cancelButton.onclick = function() {
+                modal.style.display = "none";
+            }
+        });
+    }
 
     function updateButtonVisibilityAndGreeting(user) {
         const userButton = document.getElementById('user-btn');
@@ -161,12 +103,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     updateButtonVisibilityAndGreeting(loggedInUser);
-
-    const logoutLink = document.querySelector('#profile-btn .dropdown-menu .dropdown-item[href="#"]');
-    logoutLink.addEventListener('click', function () {
-        localStorage.removeItem('LoggedInUser');
-        window.location.href = '../index.html';
-    })
 
     document.getElementById("user-cart").addEventListener("click", function () {
         let userCart = document.getElementById("user-cart");

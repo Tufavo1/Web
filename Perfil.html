@@ -74,14 +74,21 @@
                             <span></span>
                         </a>
                         <ul class="dropdown-nav dropdown-menu">
-                            <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-                                        height="20" fill="currentColor" class="bi bi-door-closed-fill"
+                            <li><button class="btn-dropdown" id="Perfil"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="20" height="20" fill="currentColor" class="bi bi-door-closed-fill"
                                         viewBox="0 0 16 16">
                                         <path
                                             d="M12 1a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2a1 1 0 0 1 1-1zm-2 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
-                                    </svg>Cerrar Sesión</a></li>
+                                    </svg>Cerrar Sesión</button></li>
                         </ul>
                     </li>
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <p>¿Estás seguro de que deseas cerrar sesión?</p>
+                            <button class="btn-logout" id="confirmButton">Sí, Quiero Cerrar Sesion</button>
+                            <button class="btn-logout-cancel" id="cancelButton">Cancelar</button>
+                        </div>
+                    </div>
                     <div id="user-panel" class="user-panel">
                         <div class="container-cart" id="cart-content">
                             <span class="close">
@@ -285,16 +292,15 @@
                             <img src="IMG/icon/historial-de-compras.png" class="img-card rounded-circle img-fluid mb-4"
                                 alt="Avatar">
                             <h4>Historial de Compras</h4>
-                            <div class="mb-2">
-                                <table class="table bg-dark">
+                            <div class="table-container mb-2">
+                                <table class="table">
                                     <thead>
                                         <th scope="row">N° transaccion</th>
                                         <td colspan="2">Nombre del producto</td>
                                         <td>Cantidad</td>
                                         <td>Precio</td>
                                     </thead>
-                                    <tbody>
-
+                                    <tbody class="table-group-divider listaHistorial">
                                     </tbody>
                                 </table>
                             </div>

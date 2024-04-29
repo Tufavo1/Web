@@ -77,20 +77,27 @@
                             <span></span>
                         </a>
                         <ul class="dropdown-nav dropdown-menu">
-                            <li><a class="dropdown-item" href="#" id="ver-perfil"><svg
+                            <li><button class="btn-dropdown" href="#" id="ver-perfil"><svg
                                         xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                         class="bi bi-person-fill" viewBox="0 0 16 16">
                                         <path
                                             d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                                    </svg>Ver Perfil</a></li>
-                            <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20"
-                                        height="20" fill="currentColor" class="bi bi-door-closed-fill"
+                                    </svg>Ver Perfil</button></li>
+                            <li><button class="btn-dropdown" id="Perfil"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="20" height="20" fill="currentColor" class="bi bi-door-closed-fill"
                                         viewBox="0 0 16 16">
                                         <path
                                             d="M12 1a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2a1 1 0 0 1 1-1zm-2 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
-                                    </svg>Cerrar Sesión</a></li>
+                                    </svg>Cerrar Sesión</button></li>
                         </ul>
                     </li>
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <p>¿Estás seguro de que deseas cerrar sesión?</p>
+                            <button class="btn-logout" id="confirmButton">Sí, Quiero Cerrar Sesion</button>
+                            <button class="btn-logout-cancel" id="cancelButton">Cancelar</button>
+                        </div>
+                    </div>
                     <div id="user-panel" class="user-panel">
                         <div class="container-cart" id="cart-content">
                             <span class="close">
