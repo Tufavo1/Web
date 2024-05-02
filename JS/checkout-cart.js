@@ -84,4 +84,20 @@ $(document).ready(function () {
             counter.val(currentValue - 1);
         }
     });
+    
+    const opcionesDespacho = document.querySelectorAll('input[name="opcion-despacho"]');
+        const formularioDespachoDomicilio = document.querySelector('.formulario-despacho');
+        const formularioTienda = document.querySelector('.formulario-tienda');
+
+        opcionesDespacho.forEach(opcion => {
+            opcion.addEventListener('change', function () {
+                if (this.value === 'domicilio') {
+                    formularioDespachoDomicilio.style.display = 'block';
+                    formularioTienda.style.display = 'none';
+                } else {
+                    formularioDespachoDomicilio.style.display = 'none';
+                    formularioTienda.style.display = 'block';
+                }
+            });
+        });
 });

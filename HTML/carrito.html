@@ -213,23 +213,83 @@
         </div>
     </nav>
 
-    <main class="container-cart">
-        <div class="cart-content">
-            <table id="lista-carrito">
-                <h1 class="titulo-cart">Productos</h1>
-                <thead>
-                    <tr>
-                        <th class="left-table text-center">Imagen</th>
-                        <th>Platillo</th>
-                        <th>Cantidad</th>
-                        <th>Precio</th>
-                        <th class="center-table"></th>
-                    </tr>
-                </thead>
-                <tbody id="carrito-body"></tbody>
-            </table>
+    <main class="container-check">
+        <div class="container-view">
+            <section class="despacho">
+                <h2>Despacho</h2>
+                <label class="label-content">
+                    <input class="select-content" type="radio" name="opcion-despacho" value="domicilio">
+                    Despacho a domicilio
+                </label>
+                <label class="label-content">
+                    <input class="select-content" type="radio" name="opcion-despacho" value="tienda">
+                    Retiro en tienda
+                </label>
+            </section>
+
+            <section class="formulario-despacho" style="display: none;">
+                <h2>Formulario de Despacho a Domicilio</h2>
+                <form id="form-despacho-domicilio">
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input class="input-form" type="text" id="nombre" name="nombre">
+                    </div>
+                    <div>
+                        <label for="direccion">Dirección:</label>
+                        <input type="text" id="direccion" name="direccion">
+                    </div>
+                    <div>
+                        <label for="region">Región:</label>
+                        <select id="region" name="region">
+                        </select>
+                    </div>
+                    <div>
+                        <label for="comuna">Comuna:</label>
+                        <select id="comuna" name="comuna">
+                        </select>
+                    </div>
+                    <div>
+                        <label for="descripcion">Descripción:</label>
+                        <textarea id="descripcion" name="descripcion"></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+            <section class="formulario-tienda" style="display: none;">
+                <h2>Formulario de Retiro en Tienda</h2>
+                <form id="form-retiro-tienda">
+                    <div>
+                        <label for="region-tienda">Región:</label>
+                        <select id="region-tienda" name="region-tienda">
+                        </select>
+                    </div>
+                    <div>
+                        <label for="comuna-tienda">Comuna:</label>
+                        <select id="comuna-tienda" name="comuna-tienda">
+                        </select>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </section>
+
+            <section class="cart-content">
+                <table id="lista-carrito">
+                    <h1 class="titulo-cart">Productos</h1>
+                    <thead>
+                        <tr>
+                            <th class="left-table text-center">Imagen</th>
+                            <th>Platillo</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th class="center-table"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="carrito-body"></tbody>
+                </table>
+            </section>
         </div>
-        <div class="checkout">
+
+        <section class="checkout">
             <div class="subtotal">
                 <p>Subtotal: <span id="subtotal">$0</span></p>
             </div>
@@ -259,7 +319,7 @@
                         </svg>Comprar</button>
                 </a>
             </div>
-        </div>
+        </section>
     </main>
 
     <div class="container-clock">

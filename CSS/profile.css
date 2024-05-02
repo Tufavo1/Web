@@ -42,6 +42,25 @@ html {
     justify-content: center;
 }
 
+.btn-locationwithweather {
+    background-color: transparent;
+    border: none;
+    color: #f4fd1d;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 10px 20px;
+    text-align: start;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.btn-locationwithweather img {
+    vertical-align: middle;
+}
+
 .btn {
     margin-left: 10px;
     color: #fff !important;

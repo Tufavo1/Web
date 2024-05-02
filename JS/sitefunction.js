@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const loggedInUser = JSON.parse(localStorage.getItem('LoggedInUser'));
     const logoutButton = document.getElementById("Perfil");
     const perfilButton = document.getElementById("ver-perfil");
+    const userCart = document.getElementById('user-cart');
 
     let isFilterApplied = false;
     let isFilterPanelOpen = false;
@@ -43,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-
+    
     var configDropdown = document.getElementById("config-dropdown");
     var configButton = document.getElementById("config-button");
 
@@ -104,8 +105,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     updateButtonVisibilityAndGreeting(loggedInUser);
 
-    document.getElementById("user-cart").addEventListener("click", function () {
-        let userCart = document.getElementById("user-cart");
         if (userCart) {
             userCart.addEventListener("click", function () {
                 let cartContent = document.getElementById("cart-content");
@@ -124,7 +123,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         }
-    });
 
     document.getElementById("user-btn").addEventListener("click", function () {
         document.getElementById("cart-content").style.display = "none";
@@ -212,18 +210,17 @@ document.addEventListener('DOMContentLoaded', function () {
             navigator.geolocation.getCurrentPosition(function (position) {
                 const latitude = position.coords.latitude;
                 const longitude = position.coords.longitude;
-
-                fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`)
+    
+                fetch(`https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json&addressdetails=1`)
                     .then(response => response.json())
                     .then(data => {
-                        const region = data.address.state;
-
-                        document.getElementById("getLocationBtn").innerHTML = `${region} <svg xmlns="http://www.w3.org/2000/svg"
-                width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
-                </svg>`;
-
-                        document.cookie = `region=${region}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
+                        const city = data.address.city || data.address.town || data.address.village || data.address.hamlet || data.address.suburb || data.address.county;
+    
+                        document.getElementById("getLocationBtn").innerHTML = `${city}, `;
+    
+                        document.cookie = `city=${city}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
+    
+                        fetchWeather(city);
                     })
                     .catch(error => {
                         console.error('Error al obtener la ubicación:', error);
@@ -249,20 +246,33 @@ document.addEventListener('DOMContentLoaded', function () {
             showAlert("Geolocalización no es soportada por este navegador.");
         }
     }
-
-    function loadRegionFromCookie() {
+    
+    function fetchWeather(city) {
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=es&appid=e7583f9125c2a26e1db48919d23bfc61`)
+            .then(response => response.json())
+            .then(info => {
+                const temperature = (info.main.temp - 273.15).toFixed(1);
+                const weatherIcon = info.weather[0].icon;
+    
+                document.getElementById("getLocationBtn").innerHTML += `${temperature} °C <img src='https://openweathermap.org/img/wn/${weatherIcon}.png'>`;
+            })
+            .catch(error => {
+                console.error('Error al obtener la información del clima:', error);
+                showAlert('Hubo un error al obtener la información del clima. Por favor, intenta nuevamente.');
+            });
+    }
+    
+    function loadCityAndWeatherFromCookie() {
         const cookies = document.cookie.split(';').map(cookie => cookie.trim());
-        const regionCookie = cookies.find(cookie => cookie.startsWith('region='));
-
-        if (regionCookie) {
-            const region = regionCookie.split('=')[1];
-            document.getElementById("getLocationBtn").innerHTML = `${region} <svg xmlns="http://www.w3.org/2000/svg"
-                width="20" height="20" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
-                </svg>`;
+        const cityCookie = cookies.find(cookie => cookie.startsWith('city='));
+    
+        if (cityCookie) {
+            const city = cityCookie.split('=')[1];
+            document.getElementById("getLocationBtn").innerHTML = `${city}, `;
+            fetchWeather(city);
         }
     }
-
+    
     document.getElementById("getLocationBtn").addEventListener("click", getLocationAndUpdateButton);
-    window.addEventListener('load', loadRegionFromCookie);
+    window.addEventListener('load', loadCityAndWeatherFromCookie);
 });
