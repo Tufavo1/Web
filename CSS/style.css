@@ -670,7 +670,7 @@ img {
 
 .card {
     position: relative;
-    width: 320px;
+    width: 250px;
     margin: 10px;
     height: 400px !important;
     overflow: hidden;

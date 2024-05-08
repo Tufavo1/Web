@@ -672,7 +672,7 @@ button[type="submit"]:hover {
 /*Estilos para el filtro*/
 .filter {
     position: sticky;
-    top: 140px;
+    top: 0;
     z-index: 1000;
 }
 
@@ -1364,7 +1364,7 @@ label[for="price-range"] {
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
-}
+    }
 
     .result-item p {
         margin: 0 auto;
