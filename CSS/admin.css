@@ -1298,7 +1298,7 @@ span {
         padding: 25px;
         margin: 0 auto;
         border: 2px solid #000;
-    }    
+    }
 
     .btn-edit {
         background-color: #000;
@@ -1312,7 +1312,7 @@ span {
         -ms-border-radius: 15px;
         -o-border-radius: 15px;
     }
-    
+
     .btn-delete {
         background-color: #F62B00;
         border: none;

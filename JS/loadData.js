@@ -6,6 +6,25 @@ $(document).ready(function () {
         document.body.appendChild(alertDiv);
     }
 
+    // Definir las categorías y sus URLs correspondientes
+    const categorias = [
+        { nombre: "Almuerzos", url: "almuerzos.html" },
+        { nombre: "Jugos", url: "jugos.html" },
+        { nombre: "Licores", url: "licores.html" },
+        { nombre: "Postres", url: "postres.html" }
+        // Agrega aquí todas tus categorías con su correspondiente URL
+    ];
+
+    // Agregar botones de categoría y tarjetas de productos por categoría
+    categorias.forEach(categoria => {
+        const html = `
+            <div class="categoria-container">
+                <button class="categoria-btn" data-url="${categoria.url}">Ver ${categoria.nombre}</button>
+                <div class="container-card productos-${categoria.nombre.toLowerCase()} productos"></div>
+            </div>`;
+        $("#allmain").append(html);
+    });
+
     if (typeof Storage !== "undefined") {
         let productos = JSON.parse(localStorage.getItem("productos"));
         if (productos === null) {
@@ -149,28 +168,31 @@ $(document).ready(function () {
 
         productos.forEach((producto) => {
             if (producto.stock > 0 && (categoriaPage === true || producto.categoria === categoriaPage)) {
+                const categoriaSlug = producto.categoria.toLowerCase();
+                const container = $(`.productos-${categoriaSlug}`);
+
                 let html = `
-                <div class="card" data-id="${producto.id}">
-                    <img src="${producto.imagen}" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h1 class="card-title">${producto.nombre}</h1>
-                        <p class="card-text">${producto.descripcion}</p>
-                        <p class="Card-categoria" style="display: none">tipo de platillo: <span id="categoria">${producto.categoria}</span>
-                        <p class="Card-stock">Disponible: <span id="Stock">${producto.stock}</span></p>
-                        <p class="card-price">Precio: $<span id="Precio">${producto.precio}</span></p>
-                        <div class="counter">
-                            <button class="counter-btn decrement">-</button>
-                            <input class="counter-value" type="number" id="contador" placeholder="1" value="1" min="1"
-                                max="${producto.stock}" class="input-quantity" readonly></input>
-                            <button class="counter-btn increment">+</button>
+                    <div class="card" data-id="${producto.id}">
+                        <img src="${producto.imagen}" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h1 class="card-title">${producto.nombre}</h1>
+                            <p class="card-text">${producto.descripcion}</p>
+                            <p class="Card-categoria" style="display: none">Tipo de platillo: <span id="categoria">${producto.categoria}</span></p>
+                            <p class="Card-stock">Disponible: <span id="Stock">${producto.stock}</span></p>
+                            <p class="card-price">Precio: $<span id="Precio">${producto.precio}</span></p>
+                            <div class="counter">
+                                <button class="counter-btn decrement">-</button>
+                                <input class="counter-value" type="number" id="contador" placeholder="1" value="1" min="1"
+                                    max="${producto.stock}" class="input-quantity" readonly></input>
+                                <button class="counter-btn increment">+</button>
+                            </div>
+                            <div class="button-container">
+                                <button class="btn-card" id="abrirResennias">Ver Reseñas</button>
+                                <button class="btn-card añadir-platillo">Añadir Platillo</button>
+                            </div>
                         </div>
-                        <div class="button-container">
-                        <button class="btn-card" id="abrirResennias">Ver Resennias</button>
-                        <button class="btn-card añadir-platillo">Añadir Platillo</button>
-                        </div>
-                    </div>
-                </div>`;
-                $(".productos").append(html);
+                    </div>`;
+                container.append(html);
             }
         });
 
@@ -203,6 +225,12 @@ $(document).ready(function () {
     } else {
         showAlert("Error al cargar los productos");
     }
+
+    // Redireccionar al hacer clic en un botón de categoría
+    $("#allmain").on("click", ".categoria-btn", function () {
+        const url = $(this).data("url");
+        window.location.href = url;
+    });
 
     if (typeof Storage !== "undefined") {
         const fileName = document.location.pathname.match(/[^\/]+$/)[0];
